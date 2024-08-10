@@ -20,7 +20,7 @@ Ki-Ra is a voice-controlled assistant built on .NET 8 and C#. It utilizes the Vo
 
 1. Clone the repository: 
    ```bash
-   git clone [https://github.com/devaliuz/Ki-Ra.git]
+   git clone https://github.com/devaliuz/Ki-Ra.git
 
 2. Navigate to the project directory:
    ```bash
