@@ -44,7 +44,6 @@ namespace KiRa.Infrastructure.Services
             AddCommand("wie geht es dir", "Mir geht es gut, danke der Nachfrage!");
             AddCommand("wie geht es dir", "Ausgezeichnet, und Ihnen?");
 
-            AddCommand("was kannst du", "Ich kann Sprache erkennen und auf verschiedene Befehle reagieren.");
             //Witz
             AddCommand("witz", "Was ist orange und klingt wie ein Papagei? Eine Karotte!");
             AddCommand("witz", "Warum können Geister nicht lügen? Weil man sie durchschaut.");
@@ -108,7 +107,7 @@ namespace KiRa.Infrastructure.Services
             using (var context = new CommandDbContext(_connectionString))
             {
                 return context.Commands
-                    .Where(c => c.Command.ToLower() != "neuer befehl" && c.Command.ToLower() != "was kannst du")
+                    .Where(c => c.Command.ToLower() != "befehle verwalten" && c.Command.ToLower() != "was kannst du")
                     .Select(c => c.Command)
                     .ToList();
             }

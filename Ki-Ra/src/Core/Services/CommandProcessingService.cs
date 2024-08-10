@@ -36,8 +36,8 @@ namespace KiRa.Core.Services
 
             switch (lowercaseInput)
             {
-                case "neuer befehl":
-                    return await AddNewCommandAsync();
+                case "befehle verwalten":
+                    return await HandleCommandManagementAsync();
                 case "was kannst du":
                     return ListAllCommands();
                     // Weitere spezielle Befehle hier hinzufügen
@@ -60,10 +60,29 @@ namespace KiRa.Core.Services
             return "Entschuldigung, ich habe das nicht verstanden.";
         }
 
+        private async Task<string> HandleCommandManagementAsync()
+        {
+            _textToSpeechService.Speak("Möchtest du neue Befehle oder Antworten hinzufügen, oder vorhandene Befehle löschen?");
+            Console.WriteLine("Möchtest du neue Befehle oder Antworten hinzufügen, oder vorhandene Befehle löschen?");
+
+            string action = await GetAudioInputAsync("Bitte sage 'Hinzufügen' oder 'Löschen'.");
+
+            switch (action.ToLower())
+            {
+                case "hinzufügen":
+                    return await AddNewCommandAsync();
+                case "löschen":
+                    return await DeleteCommandAsync();
+                default:
+                    _textToSpeechService.Speak("Ich habe dich nicht verstanden. Bitte sage 'Hinzufügen' oder 'Löschen'.");
+                    return "Ich habe dich nicht verstanden. Bitte sage 'Hinzufügen' oder 'Löschen'.";
+            }
+        }
+
         private string ListAllCommands()
         {
             var commands = _databaseManager.GetRegularCommands();
-            commands.Add("neuer befehl");
+            commands.Add("befehle verwalten");
             commands.Add("was kannst du");
             var commandList = string.Join(", ", commands);
 
@@ -107,6 +126,26 @@ namespace KiRa.Core.Services
             {
                 _textToSpeechService.Speak("Vorgang abgebrochen. Der neue Befehl wurde nicht hinzugefügt.");
                 return "Vorgang abgebrochen. Der neue Befehl wurde nicht hinzugefügt.";
+            }
+        }
+
+        private async Task<string> DeleteCommandAsync()
+        {
+            _textToSpeechService.Speak("Welchen Befehl möchtest du löschen?");
+            Console.WriteLine("Welchen Befehl möchtest du löschen?");
+
+            string commandToDelete = await GetAudioInputAsync("Bitte nenne den Befehl.");
+
+            if (_databaseManager.CommandExists(commandToDelete))
+            {
+                _databaseManager.DeleteCommand(commandToDelete);
+                _textToSpeechService.Speak($"Der Befehl '{commandToDelete}' wurde erfolgreich gelöscht.");
+                return $"Der Befehl '{commandToDelete}' wurde erfolgreich gelöscht.";
+            }
+            else
+            {
+                _textToSpeechService.Speak($"Der Befehl '{commandToDelete}' existiert nicht.");
+                return $"Der Befehl '{commandToDelete}' existiert nicht.";
             }
         }
 
