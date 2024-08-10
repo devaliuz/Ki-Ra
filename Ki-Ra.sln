@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ki-Ra", "Ki-Ra\Ki-Ra.csproj", "{ABA0BDFF-D5C2-4CEE-95CD-2609D2C1A85F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABA0BDFF-D5C2-4CEE-95CD-2609D2C1A85F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA0BDFF-D5C2-4CEE-95CD-2609D2C1A85F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA0BDFF-D5C2-4CEE-95CD-2609D2C1A85F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA0BDFF-D5C2-4CEE-95CD-2609D2C1A85F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABBD1DC5-BAFC-4B19-8E57-4B30F90BC0F1}
+	EndGlobalSection
+EndGlobal
