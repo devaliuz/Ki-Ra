@@ -23,19 +23,22 @@ Ki-Ra is a voice-controlled assistant built on .NET 8 and C#. It utilizes the Vo
    git clone [https://github.com/devaliuz/Ki-Ra.git]
 
 2. Navigate to the project directory:
-
+   ```bash
    -cd Ki-Ra
 3. Ensure you have downloaded the Vosk model into the 
 
     src/Infrastructure/models/lang_Model
     directory.
+
 4. Provide the "appsettings.json" file with the correct "ModelPath".
 
 5. Build the project:
+   ```bash
     dotnet build
 
 6. Run the application:
-    dotnet run
+   ```bash
+   dotnet run
 
 ## Usage
 Launch the application.
