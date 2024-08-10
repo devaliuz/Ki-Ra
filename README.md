@@ -47,9 +47,9 @@ Speak a command into the microphone.
 Ki-Ra will attempt to recognize the command and provide a corresponding response.
 
 ## Default Commands
-"Hallo": Ki-Ra greets you with various responses.
-"Wie geht es dir?": Ki-Ra provides information about its well-being.
-"Witz": Ki-Ra tells a joke.
-"Auf Wiedersehen": Ki-Ra says goodbye.
-"Neuer Befehl": Allows adding new commands and responses via voice commands.
-"Was kannst du": Lists all available commands.
+* **"Hallo": Ki-Ra greets you with various responses.
+* **"Wie geht es dir?": Ki-Ra provides information about its well-being.
+* **"Witz": Ki-Ra tells a joke.
+* **"Auf Wiedersehen": Ki-Ra says goodbye.
+* **"Neuer Befehl": Allows adding new commands and responses via voice commands.
+* **"Was kannst du": Lists all available commands.
