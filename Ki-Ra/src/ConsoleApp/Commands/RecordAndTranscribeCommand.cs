@@ -1,6 +1,8 @@
 ﻿using KiRa.Core.Interfaces;
 using KiRa.Core.Services;
 using KiRa.Infrastructure.Services;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace KiRa.ConsoleApp.Commands
 {
@@ -40,12 +42,28 @@ namespace KiRa.ConsoleApp.Commands
                 Console.WriteLine("Aufnahme beendet. Verarbeite Audio...");
 
                 string result = await _voiceRecognitionService.RecognizeSpeechAsync(audioData);
-                Console.WriteLine($"Erkannter Text: {result}");
 
-                string response = await _commandProcessingService.ProcessCommandAsync(result);
-                Console.WriteLine($"Antwort: {response}");
+                // JSON-Antwort in Klartext umwandeln
+                string extractedText = ExtractTextFromJson(result);
+                Console.WriteLine($"Erkannter Text (Klartext): {extractedText}");
+
+                string response = await _commandProcessingService.ProcessCommandAsync(extractedText); // Übergeben Sie den Klartext
 
                 _textToSpeechService.Speak(response);
+            }
+        }
+
+        private string ExtractTextFromJson(string jsonInput)
+        {
+            try
+            {
+                var jsonObject = JObject.Parse(jsonInput);
+                return jsonObject["text"].ToString();
+            }
+            catch (JsonReaderException)
+            {
+                // Wenn die Eingabe kein gültiges JSON ist, gib sie unverändert zurück
+                return jsonInput;
             }
         }
     }

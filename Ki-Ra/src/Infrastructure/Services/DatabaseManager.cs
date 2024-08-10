@@ -44,7 +44,7 @@ namespace KiRa.Infrastructure.Services
             AddCommand("wie geht es dir", "Mir geht es gut, danke der Nachfrage!");
             AddCommand("wie geht es dir", "Ausgezeichnet, und Ihnen?");
 
-            //AddCommand("was kannst du", "Ich kann Sprache erkennen und auf verschiedene Befehle reagieren.");
+            AddCommand("was kannst du", "Ich kann Sprache erkennen und auf verschiedene Befehle reagieren.");
             //Witz
             AddCommand("witz", "Was ist orange und klingt wie ein Papagei? Eine Karotte!");
             AddCommand("witz", "Warum können Geister nicht lügen? Weil man sie durchschaut.");

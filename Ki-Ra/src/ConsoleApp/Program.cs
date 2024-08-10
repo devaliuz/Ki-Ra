@@ -90,7 +90,7 @@ class Program
         try
         {
             var textToSpeechService = serviceProvider.GetRequiredService<TextToSpeechService>();
-            textToSpeechService.Speak("Willkommen! Die App wird geladen. Bitte haben Sie einen Moment Geduld.");
+            textToSpeechService.Speak("Hallo ich bin Kira, dein persönlicher KI-Assistent. Ich lade meine Datenbanken und stehe dir gleich zur Verfügung. Bitte hab einen Moment Geduld.");
 
             var modelLoaderService = serviceProvider.GetRequiredService<ModelLoaderService>();
             var voiceRecognitionService = serviceProvider.GetRequiredService<VoiceRecognitionService>();

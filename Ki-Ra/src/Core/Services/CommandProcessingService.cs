@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using System.Text;
 using KiRa.Infrastructure.Services;
 using KiRa.Core.Interfaces;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace KiRa.Core.Services
 {
@@ -33,20 +35,21 @@ namespace KiRa.Core.Services
             string lowercaseInput = input.ToLower().Trim();
             Console.WriteLine($"Erkannter Befehl: {lowercaseInput}"); // Debugging-Ausgabe
 
-            // Exakte Übereinstimmung für spezielle Befehle
+            // 2. Suche nach exakter Übereinstimmung für spezielle Befehle
             switch (lowercaseInput)
             {
                 case "neuer befehl":
                     return await AddNewCommandAsync();
                 case "was kannst du":
                     return ListAllCommands();
+                    // Weitere spezielle Befehle hier hinzufügen
             }
 
-            // Teilweise Übereinstimmung für reguläre Befehle
+            // 3. Suche nach regulären Befehlen in der Datenbank
             var commands = _databaseManager.GetRegularCommands();
             foreach (var command in commands)
             {
-                if (lowercaseInput.Contains(command.ToLower()))
+                if (lowercaseInput == command.ToLower()) // Exakte Übereinstimmung
                 {
                     var answers = _databaseManager.GetAnswers(command);
                     if (answers.Any())
@@ -56,6 +59,7 @@ namespace KiRa.Core.Services
                 }
             }
 
+            // 4. Wenn keine Übereinstimmung gefunden wurde, gib eine Standardantwort zurück
             return "Entschuldigung, ich habe das nicht verstanden.";
         }
 
@@ -67,10 +71,6 @@ namespace KiRa.Core.Services
             var commandList = string.Join(", ", commands);
 
             var response = $"Ich habe folgende Befehle verinnerlicht: {commandList}";
-
-            Console.WriteLine(response);
-            _textToSpeechService.Speak(response);
-
             return response;
         }
 
@@ -121,8 +121,22 @@ namespace KiRa.Core.Services
             var audioData = await _audioRecordingService.RecordAudioAsync();
             string recognizedText = await _voiceRecognitionService.RecognizeSpeechAsync(audioData);
 
-            Console.WriteLine($"Erkannter Text: {recognizedText}");
-            return recognizedText;
+            //Console.WriteLine($"Erkannter Text: {recognizedText}");
+            return ExtractTextFromJson(recognizedText);
+        }
+
+        private string ExtractTextFromJson(string jsonInput)
+        {
+            try
+            {
+                var jsonObject = JObject.Parse(jsonInput);
+                return jsonObject["text"].ToString();
+            }
+            catch (JsonReaderException)
+            {
+                // Wenn die Eingabe kein gültiges JSON ist, gib sie unverändert zurück
+                return jsonInput;
+            }
         }
     }
 }

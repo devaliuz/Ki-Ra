@@ -42,8 +42,6 @@ namespace KiRa.Infrastructure.Services
 
                 isRecording = false;
                 waveIn.StopRecording();
-
-                Console.WriteLine("Aufnahme beendet.");
             }
 
             return audioData.ToArray();
