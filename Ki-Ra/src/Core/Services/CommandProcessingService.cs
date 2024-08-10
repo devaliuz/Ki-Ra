@@ -33,9 +33,7 @@ namespace KiRa.Core.Services
         public async Task<string> ProcessCommandAsync(string input)
         {
             string lowercaseInput = input.ToLower().Trim();
-            Console.WriteLine($"Erkannter Befehl: {lowercaseInput}"); // Debugging-Ausgabe
 
-            // 2. Suche nach exakter Übereinstimmung für spezielle Befehle
             switch (lowercaseInput)
             {
                 case "neuer befehl":
@@ -45,11 +43,10 @@ namespace KiRa.Core.Services
                     // Weitere spezielle Befehle hier hinzufügen
             }
 
-            // 3. Suche nach regulären Befehlen in der Datenbank
             var commands = _databaseManager.GetRegularCommands();
             foreach (var command in commands)
             {
-                if (lowercaseInput == command.ToLower()) // Exakte Übereinstimmung
+                if (lowercaseInput == command.ToLower())
                 {
                     var answers = _databaseManager.GetAnswers(command);
                     if (answers.Any())
@@ -121,22 +118,7 @@ namespace KiRa.Core.Services
             var audioData = await _audioRecordingService.RecordAudioAsync();
             string recognizedText = await _voiceRecognitionService.RecognizeSpeechAsync(audioData);
 
-            //Console.WriteLine($"Erkannter Text: {recognizedText}");
-            return ExtractTextFromJson(recognizedText);
-        }
-
-        private string ExtractTextFromJson(string jsonInput)
-        {
-            try
-            {
-                var jsonObject = JObject.Parse(jsonInput);
-                return jsonObject["text"].ToString();
-            }
-            catch (JsonReaderException)
-            {
-                // Wenn die Eingabe kein gültiges JSON ist, gib sie unverändert zurück
-                return jsonInput;
-            }
+            return JsonUtility.ExtractTextFromJson(recognizedText);
         }
     }
 }

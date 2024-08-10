@@ -44,26 +44,13 @@ namespace KiRa.ConsoleApp.Commands
                 string result = await _voiceRecognitionService.RecognizeSpeechAsync(audioData);
 
                 // JSON-Antwort in Klartext umwandeln
-                string extractedText = ExtractTextFromJson(result);
-                Console.WriteLine($"Erkannter Text (Klartext): {extractedText}");
+                string extractedText = JsonUtility.ExtractTextFromJson(result);
+                Console.WriteLine($"Verstandener Befehl: {extractedText}"); // Ausgabe in einer Zeile
 
-                string response = await _commandProcessingService.ProcessCommandAsync(extractedText); // Übergeben Sie den Klartext
+                string response = await _commandProcessingService.ProcessCommandAsync(extractedText);
 
+                Console.WriteLine($"Antwort: {response}"); // Ausgabe in einer Zeile
                 _textToSpeechService.Speak(response);
-            }
-        }
-
-        private string ExtractTextFromJson(string jsonInput)
-        {
-            try
-            {
-                var jsonObject = JObject.Parse(jsonInput);
-                return jsonObject["text"].ToString();
-            }
-            catch (JsonReaderException)
-            {
-                // Wenn die Eingabe kein gültiges JSON ist, gib sie unverändert zurück
-                return jsonInput;
             }
         }
     }
