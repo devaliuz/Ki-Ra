@@ -32,7 +32,7 @@ Ki-Ra is a voice-controlled assistant built on .NET 8 and C#. It utilizes the Vo
    
 4. Ensure you have downloaded the Vosk model into the 
 
-    src/Infrastructure/models/lang_Model
+    "src/Infrastructure/models/lang_Model"
     directory.
 
 5. Provide the "appsettings.json" file with the correct "ModelPath".
