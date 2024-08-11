@@ -15,48 +15,49 @@ namespace KiRa.Core.Services
         private readonly TextToSpeechService _textToSpeechService;
         private readonly AudioRecordingService _audioRecordingService;
         private readonly IVoiceRecognitionService _voiceRecognitionService;
+        private readonly CommandRecognitionService _commandRecognitionService;
         private readonly Random _random;
 
         public CommandProcessingService(
             DatabaseManager databaseManager,
             TextToSpeechService textToSpeechService,
             AudioRecordingService audioRecordingService,
-            IVoiceRecognitionService voiceRecognitionService)
+            IVoiceRecognitionService voiceRecognitionService,
+            CommandRecognitionService commandRecognitionService)
         {
             _databaseManager = databaseManager;
             _textToSpeechService = textToSpeechService;
             _audioRecordingService = audioRecordingService;
             _voiceRecognitionService = voiceRecognitionService;
+            _commandRecognitionService = commandRecognitionService;
             _random = new Random();
         }
 
         public async Task<string> ProcessCommandAsync(string input)
         {
-            string lowercaseInput = input.ToLower().Trim();
+            string recognizedCommand = _commandRecognitionService.RecognizeCommand(input);
 
-            switch (lowercaseInput)
+            if (recognizedCommand != null)
             {
-                case "befehle verwalten":
-                    return await HandleCommandManagementAsync();
-                case "was kannst du":
-                    return ListAllCommands();
-                    // Weitere spezielle Befehle hier hinzufügen
-            }
-
-            var commands = _databaseManager.GetRegularCommands();
-            foreach (var command in commands)
-            {
-                if (lowercaseInput == command.ToLower())
+                // Überprüfen Sie zuerst auf die speziellen Befehle
+                if (_databaseManager.GetSynonyms("befehle verwalten").Contains(recognizedCommand.ToLower()))
                 {
-                    var answers = _databaseManager.GetAnswers(command);
-                    if (answers.Any())
-                    {
-                        return answers[_random.Next(answers.Count)];
-                    }
+                    return await HandleCommandManagementAsync();
+                }
+                else if (_databaseManager.GetSynonyms("was kannst du").Contains(recognizedCommand.ToLower()))
+                {
+                    return ListAllCommands();
+                }
+
+                // Wenn es kein spezieller Befehl ist, suchen Sie nach Antworten in der Datenbank
+                var answers = _databaseManager.GetAnswers(recognizedCommand);
+                if (answers.Any())
+                {
+                    return answers[_random.Next(answers.Count)];
                 }
             }
 
-            // 4. Wenn keine Übereinstimmung gefunden wurde, gib eine Standardantwort zurück
+            // Wenn kein Befehl erkannt wurde oder keine Antwort gefunden wurde
             return "Entschuldigung, ich habe das nicht verstanden.";
         }
 
@@ -82,8 +83,6 @@ namespace KiRa.Core.Services
         private string ListAllCommands()
         {
             var commands = _databaseManager.GetRegularCommands();
-            commands.Add("befehle verwalten");
-            commands.Add("was kannst du");
             var commandList = string.Join(", ", commands);
 
             var response = $"Ich habe folgende Befehle verinnerlicht: {commandList}";
@@ -119,12 +118,10 @@ namespace KiRa.Core.Services
             if (confirmation.ToLower() == "ja")
             {
                 _databaseManager.AddNewCommand(newCommand, newAnswer);
-                _textToSpeechService.Speak("Neuer Befehl wurde erfolgreich hinzugefügt.");
                 return "Neuer Befehl wurde erfolgreich hinzugefügt.";
             }
             else
             {
-                _textToSpeechService.Speak("Vorgang abgebrochen. Der neue Befehl wurde nicht hinzugefügt.");
                 return "Vorgang abgebrochen. Der neue Befehl wurde nicht hinzugefügt.";
             }
         }
@@ -139,7 +136,6 @@ namespace KiRa.Core.Services
             if (_databaseManager.CommandExists(commandToDelete))
             {
                 _databaseManager.DeleteCommand(commandToDelete);
-                _textToSpeechService.Speak($"Der Befehl '{commandToDelete}' wurde erfolgreich gelöscht.");
                 return $"Der Befehl '{commandToDelete}' wurde erfolgreich gelöscht.";
             }
             else
@@ -151,10 +147,14 @@ namespace KiRa.Core.Services
 
         private async Task<string> GetAudioInputAsync(string prompt)
         {
-            _textToSpeechService.Speak(prompt);
             Console.WriteLine(prompt);
 
-            var audioData = await _audioRecordingService.RecordAudioAsync();
+            AudioPlayerService audioPlayerService = new AudioPlayerService();
+
+            audioPlayerService.PlaySound("pling.mp3");
+
+            var audioData = await _audioRecordingService.RecordAudioWithThresholdAsync(5000, -50, 1000);
+
             string recognizedText = await _voiceRecognitionService.RecognizeSpeechAsync(audioData);
 
             return JsonUtility.ExtractTextFromJson(recognizedText);

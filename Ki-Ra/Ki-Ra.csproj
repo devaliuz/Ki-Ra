@@ -8,6 +8,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<PackageReference Include="F23.StringSimilarity" Version="6.0.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.7" />
@@ -31,7 +32,6 @@
 
 	<ItemGroup>
 		<Folder Include="src\Core\Models\" />
-		<Folder Include="src\Infrastructure\Repositories\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -54,6 +54,12 @@
 	<ItemGroup>
 		<None Update="background_music.mp3">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="pling.mp3">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="trigger_sound.mp3">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
 </Project>

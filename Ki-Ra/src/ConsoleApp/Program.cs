@@ -83,6 +83,15 @@ class Program
         services.AddSingleton<CommandProcessingService>();
         services.AddSingleton<TextToSpeechService>();
         services.AddSingleton(audioPlayerService);
+        services.AddSingleton<CommandRecognitionService>();
+
+        // Modell als Singleton registrieren
+        services.AddSingleton<Model>(sp =>
+        {
+            var modelLoader = sp.GetRequiredService<ModelLoaderService>();
+            return modelLoader.LoadModelAsync().Result;
+        });
+
         services.AddTransient<RecordAndTranscribeCommand>();
 
         var serviceProvider = services.BuildServiceProvider();
@@ -90,16 +99,17 @@ class Program
         try
         {
             var textToSpeechService = serviceProvider.GetRequiredService<TextToSpeechService>();
+
             textToSpeechService.Speak("Hallo ich bin Kira, dein persönlicher KI-Assistent. Ich lade meine Datenbanken und stehe dir gleich zur Verfügung. Bitte hab einen Moment Geduld.");
 
-            var modelLoaderService = serviceProvider.GetRequiredService<ModelLoaderService>();
+            // Lade das Modell einmal
+            Console.WriteLine("Lade Modell...");
+            var model = serviceProvider.GetRequiredService<Model>();
+            Console.WriteLine("Modell erfolgreich geladen.");
+
             var voiceRecognitionService = serviceProvider.GetRequiredService<VoiceRecognitionService>();
             var audioRecordingService = serviceProvider.GetRequiredService<AudioRecordingService>();
             var command = serviceProvider.GetRequiredService<RecordAndTranscribeCommand>();
-
-            Console.WriteLine("Lade Modell...");
-            Model model = await modelLoaderService.LoadModelAsync();
-            Console.WriteLine("Modell erfolgreich geladen.");
 
             Console.WriteLine("Erstelle Recognizer...");
             VoskRecognizer recognizer = new VoskRecognizer(model, 16000.0f);

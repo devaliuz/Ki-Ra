@@ -1,8 +1,11 @@
-﻿using KiRa.Core.Interfaces;
+﻿using System;
+using System.Threading.Tasks;
+using KiRa.Core.Interfaces;
 using KiRa.Core.Services;
 using KiRa.Infrastructure.Services;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
+using Vosk;
+using NAudio.Wave;
+using System.IO;
 
 namespace KiRa.ConsoleApp.Commands
 {
@@ -12,46 +15,86 @@ namespace KiRa.ConsoleApp.Commands
         private readonly AudioRecordingService _audioRecordingService;
         private readonly CommandProcessingService _commandProcessingService;
         private readonly TextToSpeechService _textToSpeechService;
+        private readonly VoskRecognizer _triggerRecognizer;
+        private readonly AudioPlayerService _audioPlayerService;
 
         public RecordAndTranscribeCommand(
             IVoiceRecognitionService voiceRecognitionService,
             AudioRecordingService audioRecordingService,
             CommandProcessingService commandProcessingService,
-            TextToSpeechService textToSpeechService)
+            TextToSpeechService textToSpeechService,
+            Model model,
+            AudioPlayerService audioPlayerService)
         {
             _voiceRecognitionService = voiceRecognitionService;
             _audioRecordingService = audioRecordingService;
             _commandProcessingService = commandProcessingService;
             _textToSpeechService = textToSpeechService;
+            _triggerRecognizer = new VoskRecognizer(model, 16000.0f);
+            _triggerRecognizer.SetMaxAlternatives(0);
+            _triggerRecognizer.SetWords(true);
+            _audioPlayerService = audioPlayerService;
         }
 
         public async Task ExecuteAsync()
         {
             while (true)
             {
-                Console.WriteLine("\nDrücken Sie eine beliebige Taste, um die Aufnahme zu starten (ESC zum Beenden)...");
-                var key = Console.ReadKey(true);
-                if (key.Key == ConsoleKey.Escape)
+                Console.WriteLine("Warte auf Triggerwort 'Kira'...");
+                await WaitForTriggerWord();
+
+                // Spiele Audiosignal ab
+                PlayTriggerSound();
+
+                Console.WriteLine("Triggerwort erkannt. Höre auf Befehl...");
+                var audioData = await _audioRecordingService.RecordAudioWithThresholdAsync(5000, -50, 1000);
+
+                if (audioData.Length > 0)
                 {
-                    _textToSpeechService.Speak("Die Anwendung wird beendet. Auf Wiedersehen!");
-                    break;
+                    Console.WriteLine("Verarbeite Audio...");
+                    string result = await _voiceRecognitionService.RecognizeSpeechAsync(audioData);
+                    string extractedText = JsonUtility.ExtractTextFromJson(result);
+                    Console.WriteLine($"Verstandener Befehl: {extractedText}");
+                    string response = await _commandProcessingService.ProcessCommandAsync(extractedText);
+                    Console.WriteLine($"Antwort: {response}");
+                    _textToSpeechService.Speak(response);
                 }
-
-                var audioData = await _audioRecordingService.RecordAudioAsync();
-
-                Console.WriteLine("Aufnahme beendet. Verarbeite Audio...");
-
-                string result = await _voiceRecognitionService.RecognizeSpeechAsync(audioData);
-
-                // JSON-Antwort in Klartext umwandeln
-                string extractedText = JsonUtility.ExtractTextFromJson(result);
-                Console.WriteLine($"Verstandener Befehl: {extractedText}"); // Ausgabe in einer Zeile
-
-                string response = await _commandProcessingService.ProcessCommandAsync(extractedText);
-
-                Console.WriteLine($"Antwort: {response}"); // Ausgabe in einer Zeile
-                _textToSpeechService.Speak(response);
+                else
+                {
+                    Console.WriteLine("Keine Spracheingabe erkannt.");
+                }
             }
+        }
+
+        private async Task WaitForTriggerWord()
+        {
+            using (var waveIn = new WaveInEvent())
+            {
+                waveIn.WaveFormat = new WaveFormat(16000, 1);
+                waveIn.DataAvailable += (sender, e) =>
+                {
+                    if (_triggerRecognizer.AcceptWaveform(e.Buffer, e.BytesRecorded))
+                    {
+                        var result = _triggerRecognizer.Result();
+                        if (result.ToLower().Contains("kira"))
+                        {
+                            waveIn.StopRecording();
+                        }
+                    }
+                };
+
+                var tcs = new TaskCompletionSource<bool>();
+                waveIn.RecordingStopped += (sender, e) => tcs.TrySetResult(true);
+
+                waveIn.StartRecording();
+                await tcs.Task;
+            }
+        }
+
+        private void PlayTriggerSound()
+        {
+            string soundPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pling.mp3");
+            _audioPlayerService.PlaySound(soundPath);
         }
     }
 }

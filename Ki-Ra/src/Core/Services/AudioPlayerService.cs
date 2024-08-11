@@ -22,6 +22,20 @@ namespace KiRa.Core.Services
             outputDevice?.Stop();
         }
 
+        public void PlaySound(string filePath)
+        {
+            using (var audioFile = new AudioFileReader(filePath))
+            using (var outputDevice = new WaveOutEvent())
+            {
+                outputDevice.Init(audioFile);
+                outputDevice.Play();
+                while (outputDevice.PlaybackState == PlaybackState.Playing)
+                {
+                    System.Threading.Thread.Sleep(100);
+                }
+            }
+        }
+
         public void Dispose()
         {
             outputDevice?.Dispose();
