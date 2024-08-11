@@ -66,6 +66,8 @@ namespace KiRa.ConsoleApp.Commands
             }
         }
 
+        //TODO RESX WEITER FÜLLEN
+
         private async Task WaitForTriggerWord()
         {
             using (var waveIn = new WaveInEvent())

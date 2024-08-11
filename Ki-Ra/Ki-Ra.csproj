@@ -52,6 +52,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="src\Language\texts.Designer.cs">
+	    <DependentUpon>texts.resx</DependentUpon>
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="src\Language\texts.resx">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	    <LastGenOutput>texts.Designer.cs</LastGenOutput>
+	    <Generator>ResXFileCodeGenerator</Generator>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
 		<None Update="src\Media\background_music.mp3">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
