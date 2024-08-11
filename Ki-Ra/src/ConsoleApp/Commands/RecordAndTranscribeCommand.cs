@@ -93,7 +93,7 @@ namespace KiRa.ConsoleApp.Commands
 
         private void PlayTriggerSound()
         {
-            string soundPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "pling.mp3");
+            string soundPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "src", "Media", "pling.mp3");
             _audioPlayerService.PlaySound(soundPath);
         }
     }

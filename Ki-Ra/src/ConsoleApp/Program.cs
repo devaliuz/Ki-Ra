@@ -18,7 +18,7 @@ class Program
         Console.WriteLine("Willkommen! Die App wird gestartet. Bitte haben Sie einen Moment Geduld.");
 
         var audioPlayerService = new AudioPlayerService();
-        var backgroundMusicPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "background_music.mp3");
+        var backgroundMusicPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "src","Media", "background_music.mp3");
         audioPlayerService.PlayBackgroundMusic(backgroundMusicPath);
 
         // Konfiguration laden

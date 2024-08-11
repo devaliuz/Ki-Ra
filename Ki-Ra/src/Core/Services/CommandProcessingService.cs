@@ -151,7 +151,9 @@ namespace KiRa.Core.Services
 
             AudioPlayerService audioPlayerService = new AudioPlayerService();
 
-            audioPlayerService.PlaySound("pling.mp3");
+            string soundPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "src", "Media", "pling.mp3");
+
+            audioPlayerService.PlaySound(soundPath);
 
             var audioData = await _audioRecordingService.RecordAudioWithThresholdAsync(5000, -50, 1000);
 

@@ -52,13 +52,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="background_music.mp3">
+		<None Update="src\Media\background_music.mp3">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None Update="pling.mp3">
+		<None Update="src\Media\pling.mp3">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None Update="trigger_sound.mp3">
+		<None Update="src\Media\trigger_sound.mp3">
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
