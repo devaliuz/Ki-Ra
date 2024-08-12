@@ -17,7 +17,7 @@ namespace KiRa.Core.Services
         {
             if (_recognizer == null)
             {
-                throw new InvalidOperationException("Recognizer has not been initialized. Call Initialize method first.");
+                throw new InvalidOperationException($"Recognizer has not been initialized. Call Initialize method first.");
             }
 
             _recognizer.AcceptWaveform(audioData, audioData.Length);

@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Initial_Greeting_TXT" xml:space="preserve">
+  <data name="INFO_Initial_Greeting_TXT" xml:space="preserve">
     <value>Willkommen! Die App wird gestartet. Bitte haben Sie einen Moment Geduld.</value>
   </data>
   <data name="ERROR_Modeldirectory_not_found" xml:space="preserve">
@@ -130,12 +130,12 @@
     <value>Welches Model soll geladen werden?</value>
   </data>
   <data name="INPUT_Chose_Model_Range" xml:space="preserve">
-    <value>"Bitte wählen Sie ein Modell (1-</value>
+    <value>Bitte wählen Sie ein Modell (1-</value>
   </data>
   <data name="INFO_chosen_Model" xml:space="preserve">
     <value>Gewähltes Modell:</value>
   </data>
-  <data name="Initial_Greeting_VOICE" xml:space="preserve">
+  <data name="INFO_Initial_Greeting_VOICE" xml:space="preserve">
     <value>Hallo ich bin Kira, dein persönlicher KI-Assistent. Ich lade meine Datenbanken und stehe dir gleich zur Verfügung. Bitte hab einen Moment Geduld.</value>
   </data>
   <data name="INFO_Loading_Model" xml:space="preserve">
@@ -156,7 +156,7 @@
   <data name="INFO_Init_Recognitionservice_done" xml:space="preserve">
     <value>VoiceRecognitionService initialisiert.</value>
   </data>
-  <data name="Ready_VOICE" xml:space="preserve">
+  <data name="INFO_Ready_VOICE" xml:space="preserve">
     <value>Die App ist jetzt bereit.</value>
   </data>
   <data name="ERROR_occured" xml:space="preserve">
@@ -185,5 +185,71 @@
   </data>
   <data name="INFO_No_Voirce_Recognized" xml:space="preserve">
     <value>Keine Spracheingabe erkannt.</value>
+  </data>
+  <data name="INFO_Didnt_Understand" xml:space="preserve">
+    <value>Entschuldigung, ich habe das nicht verstanden.</value>
+  </data>
+  <data name="MANAGE_Commands" xml:space="preserve">
+    <value>Möchtest du neue Befehle oder Antworten hinzufügen, oder vorhandene Befehle löschen?</value>
+  </data>
+  <data name="MANAGE_Didnt_Understand" xml:space="preserve">
+    <value>Ich habe dich nicht verstanden. Bitte sage 'Hinzufügen' oder 'Löschen'.</value>
+  </data>
+  <data name="MANAGE_Ask_For_Answer" xml:space="preserve">
+    <value>Bitte sage 'Hinzufügen' oder 'Löschen'.</value>
+  </data>
+  <data name="GENERAL_Add" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="GENERAL_Delete" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="COMMAND_Help" xml:space="preserve">
+    <value>Ich habe folgende Befehle verinnerlicht:</value>
+  </data>
+  <data name="MANAGE_New_Command" xml:space="preserve">
+    <value>Okay, lassen Sie uns einen neuen Befehl hinzufügen.</value>
+  </data>
+  <data name="MANAGE_Waiting_for_new_Command" xml:space="preserve">
+    <value>Bitte sagen Sie den Namen des neuen Befehls.</value>
+  </data>
+  <data name="MANAGE_Comand_Exists" xml:space="preserve">
+    <value>Dieser Befehl existiert bereits. Wir fügen eine neue Antwort hinzu.</value>
+  </data>
+  <data name="MANAGE_Add_Answer" xml:space="preserve">
+    <value>Bitte sagen Sie die Antwort für diesen Befehl.</value>
+  </data>
+  <data name="MANAGE_Adding_New_Command" xml:space="preserve">
+    <value>Neuer Befehl wird angelegt.</value>
+  </data>
+  <data name="MANAGE_Check_Answer" xml:space="preserve">
+    <value>Die neue Antwort lautet: $$$. Ist das korrekt? Sagen Sie ja, um zu bestätigen.</value>
+  </data>
+  <data name="MANAGE_Commit_new_Answer" xml:space="preserve">
+    <value>Bitte bestätigen Sie mit 'ja' oder 'nein'.</value>
+  </data>
+  <data name="MANAGE_Succsess" xml:space="preserve">
+    <value>Neuer Befehl wurde erfolgreich hinzugefügt.</value>
+  </data>
+  <data name="MANAGE_Cancel" xml:space="preserve">
+    <value>Vorgang abgebrochen. Der neue Befehl wurde nicht hinzugefügt.</value>
+  </data>
+  <data name="MANAGE_Delete_Command_Input" xml:space="preserve">
+    <value>Welchen Befehl möchtest du löschen?</value>
+  </data>
+  <data name="MANAGE_Delete_Command_CTA" xml:space="preserve">
+    <value>Bitte nenne den Befehl.</value>
+  </data>
+  <data name="MANAGE_Delete_Succsess" xml:space="preserve">
+    <value>Der Befehl '$$$' wurde erfolgreich gelöscht.</value>
+  </data>
+  <data name="MANAGE_Delete_Cancel" xml:space="preserve">
+    <value>Der Befehl '$$$' existiert nicht.</value>
+  </data>
+  <data name="ERROR_LangModel_Directory_not_found" xml:space="preserve">
+    <value>Das Sprachmodell-Verzeichnis wurde nicht gefunden:</value>
+  </data>
+  <data name="INFO_UI_Language" xml:space="preserve">
+    <value>Userinterface auf deutsch gesetzt.</value>
   </data>
 </root>

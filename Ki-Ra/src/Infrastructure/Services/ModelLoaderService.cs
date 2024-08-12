@@ -17,7 +17,7 @@ namespace KiRa.Infrastructure.Services
         {
             if (!Directory.Exists(_modelPath))
             {
-                throw new DirectoryNotFoundException($"Das Sprachmodell-Verzeichnis wurde nicht gefunden: {_modelPath}");
+                throw new DirectoryNotFoundException($"{LanguageManager.GetString("ERROR_LangModel_Directory_not_found")} {_modelPath}");
             }
             return await Task.Run(() =>
             {
@@ -27,8 +27,8 @@ namespace KiRa.Infrastructure.Services
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Fehler beim Laden des Modells: {ex.Message}");
-                    Console.WriteLine($"StackTrace: {ex.StackTrace}");
+                    Console.WriteLine($"{LanguageManager.GetString("ERROR_Message")} {ex.Message}");
+                    Console.WriteLine($"{LanguageManager.GetString("ERROR_StackTrace")}: {ex.StackTrace}");
                     throw;
                 }
             });

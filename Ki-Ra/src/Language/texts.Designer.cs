@@ -72,6 +72,24 @@ namespace Ki_Ra.src.Language {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
         /// </summary>
+        internal static string COMMAND_Help {
+            get {
+                return ResourceManager.GetString("COMMAND_Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string ERROR_LangModel_Directory_not_found {
+            get {
+                return ResourceManager.GetString("ERROR_LangModel_Directory_not_found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
         internal static string ERROR_Message {
             get {
                 return ResourceManager.GetString("ERROR_Message", resourceCulture);
@@ -108,6 +126,24 @@ namespace Ki_Ra.src.Language {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
         /// </summary>
+        internal static string GENERAL_Add {
+            get {
+                return ResourceManager.GetString("GENERAL_Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string GENERAL_Delete {
+            get {
+                return ResourceManager.GetString("GENERAL_Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
         internal static string INFO_Automatically_chosen_Model {
             get {
                 return ResourceManager.GetString("INFO_Automatically_chosen_Model", resourceCulture);
@@ -135,6 +171,15 @@ namespace Ki_Ra.src.Language {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
         /// </summary>
+        internal static string INFO_Didnt_Understand {
+            get {
+                return ResourceManager.GetString("INFO_Didnt_Understand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
         internal static string INFO_Init_Recognitionservice {
             get {
                 return ResourceManager.GetString("INFO_Init_Recognitionservice", resourceCulture);
@@ -147,6 +192,24 @@ namespace Ki_Ra.src.Language {
         internal static string INFO_Init_Recognitionservice_done {
             get {
                 return ResourceManager.GetString("INFO_Init_Recognitionservice_done", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string INFO_Initial_Greeting_TXT {
+            get {
+                return ResourceManager.GetString("INFO_Initial_Greeting_TXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string INFO_Initial_Greeting_VOICE {
+            get {
+                return ResourceManager.GetString("INFO_Initial_Greeting_VOICE", resourceCulture);
             }
         }
         
@@ -189,6 +252,15 @@ namespace Ki_Ra.src.Language {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
         /// </summary>
+        internal static string INFO_Ready_VOICE {
+            get {
+                return ResourceManager.GetString("INFO_Ready_VOICE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
         internal static string INFO_Recognized_Order {
             get {
                 return ResourceManager.GetString("INFO_Recognized_Order", resourceCulture);
@@ -216,27 +288,18 @@ namespace Ki_Ra.src.Language {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
         /// </summary>
+        internal static string INFO_UI_Language {
+            get {
+                return ResourceManager.GetString("INFO_UI_Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
         internal static string INFO_Waiting_for_Trigger {
             get {
                 return ResourceManager.GetString("INFO_Waiting_for_Trigger", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
-        /// </summary>
-        internal static string Initial_Greeting_TXT {
-            get {
-                return ResourceManager.GetString("Initial_Greeting_TXT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
-        /// </summary>
-        internal static string Initial_Greeting_VOICE {
-            get {
-                return ResourceManager.GetString("Initial_Greeting_VOICE", resourceCulture);
             }
         }
         
@@ -261,9 +324,144 @@ namespace Ki_Ra.src.Language {
         /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
         /// </summary>
-        internal static string Ready_VOICE {
+        internal static string MANAGE_Add_Answer {
             get {
-                return ResourceManager.GetString("Ready_VOICE", resourceCulture);
+                return ResourceManager.GetString("MANAGE_Add_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Adding_New_Command {
+            get {
+                return ResourceManager.GetString("MANAGE_Adding_New_Command", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Ask_For_Answer {
+            get {
+                return ResourceManager.GetString("MANAGE_Ask_For_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Cancel {
+            get {
+                return ResourceManager.GetString("MANAGE_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Check_Answer {
+            get {
+                return ResourceManager.GetString("MANAGE_Check_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Comand_Exists {
+            get {
+                return ResourceManager.GetString("MANAGE_Comand_Exists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Commands {
+            get {
+                return ResourceManager.GetString("MANAGE_Commands", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Commit_new_Answer {
+            get {
+                return ResourceManager.GetString("MANAGE_Commit_new_Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Delete_Cancel {
+            get {
+                return ResourceManager.GetString("MANAGE_Delete_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Delete_Command_CTA {
+            get {
+                return ResourceManager.GetString("MANAGE_Delete_Command_CTA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Delete_Command_Input {
+            get {
+                return ResourceManager.GetString("MANAGE_Delete_Command_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Delete_Succsess {
+            get {
+                return ResourceManager.GetString("MANAGE_Delete_Succsess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Didnt_Understand {
+            get {
+                return ResourceManager.GetString("MANAGE_Didnt_Understand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_New_Command {
+            get {
+                return ResourceManager.GetString("MANAGE_New_Command", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Succsess {
+            get {
+                return ResourceManager.GetString("MANAGE_Succsess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        /// </summary>
+        internal static string MANAGE_Waiting_for_new_Command {
+            get {
+                return ResourceManager.GetString("MANAGE_Waiting_for_new_Command", resourceCulture);
             }
         }
     }

@@ -6,6 +6,7 @@ using KiRa.Infrastructure.Services;
 using KiRa.Core.Interfaces;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using System.Globalization;
 
 namespace KiRa.Core.Services
 {
@@ -58,95 +59,116 @@ namespace KiRa.Core.Services
             }
 
             // Wenn kein Befehl erkannt wurde oder keine Antwort gefunden wurde
-            return "Entschuldigung, ich habe das nicht verstanden.";
+            return LanguageManager.GetString("INFO_Didnt_Understand");
         }
 
         private async Task<string> HandleCommandManagementAsync()
         {
-            _textToSpeechService.Speak("Möchtest du neue Befehle oder Antworten hinzufügen, oder vorhandene Befehle löschen?");
-            Console.WriteLine("Möchtest du neue Befehle oder Antworten hinzufügen, oder vorhandene Befehle löschen?");
+            string response = LanguageManager.GetString("MANAGE_Commands");
+            _textToSpeechService.Speak(response);
+            Console.WriteLine(response);
 
-            string action = await GetAudioInputAsync("Bitte sage 'Hinzufügen' oder 'Löschen'.");
+            string action = await GetAudioInputAsync(LanguageManager.GetString("MANAGE_Ask_For_Answer"));
 
-            switch (action.ToLower())
+            if (IsActionMatch(action, "GENERAL_Add"))
             {
-                case "hinzufügen":
-                    return await AddNewCommandAsync();
-                case "löschen":
-                    return await DeleteCommandAsync();
-                default:
-                    _textToSpeechService.Speak("Ich habe dich nicht verstanden. Bitte sage 'Hinzufügen' oder 'Löschen'.");
-                    return "Ich habe dich nicht verstanden. Bitte sage 'Hinzufügen' oder 'Löschen'.";
+                return await AddNewCommandAsync();
+            }
+            else if (IsActionMatch(action, "GENERAL_Delete"))
+            {
+                return await DeleteCommandAsync();
+            }
+            else
+            {
+                response = LanguageManager.GetString("MANAGE_Didnt_Understand");
+                _textToSpeechService.Speak(response);
+                return response;
             }
         }
+
+        private bool IsActionMatch(string action, string resourceKey)
+        {
+            string localizedAction = LanguageManager.GetString(resourceKey);
+            return action.Equals(localizedAction, StringComparison.OrdinalIgnoreCase);
+        }
+
+
 
         private string ListAllCommands()
         {
             var commands = _databaseManager.GetRegularCommands();
             var commandList = string.Join(", ", commands);
 
-            var response = $"Ich habe folgende Befehle verinnerlicht: {commandList}";
+            var response = $"{LanguageManager.GetString("COMMAND_Help")} {commandList}";
             return response;
         }
 
         private async Task<string> AddNewCommandAsync()
         {
-            _textToSpeechService.Speak("Okay, lassen Sie uns einen neuen Befehl hinzufügen.");
-            Console.WriteLine("Okay, lassen Sie uns einen neuen Befehl hinzufügen.");
+            string response = $"{LanguageManager.GetString("MANAGE_New_Command")}";
+            _textToSpeechService.Speak(response);
+            Console.WriteLine(response);
 
-            string newCommand = await GetAudioInputAsync("Bitte sagen Sie den Namen des neuen Befehls.");
+            string newCommand = await GetAudioInputAsync($"{LanguageManager.GetString("MANAGE_Waiting_for_new_Command")}");
 
             bool commandExists = _databaseManager.CommandExists(newCommand);
             if (commandExists)
             {
-                _textToSpeechService.Speak("Dieser Befehl existiert bereits. Wir fügen eine neue Antwort hinzu.");
-                Console.WriteLine("Dieser Befehl existiert bereits. Wir fügen eine neue Antwort hinzu.");
+                response = $"{LanguageManager.GetString("MANAGE_Comand_Exists")}";
+                _textToSpeechService.Speak(response);
+                Console.WriteLine(response);
             }
             else
             {
-                _textToSpeechService.Speak("Neuer Befehl wird angelegt.");
-                Console.WriteLine("Neuer Befehl wird angelegt.");
+                response = $"{LanguageManager.GetString("MANAGE_Adding_New_Command")}";
+                _textToSpeechService.Speak(response);
+                Console.WriteLine(response);
             }
 
-            string newAnswer = await GetAudioInputAsync("Bitte sagen Sie die Antwort für diesen Befehl.");
+            string newAnswer = await GetAudioInputAsync($"{LanguageManager.GetString("MANAGE_Add_Answer")}");
 
-            _textToSpeechService.Speak($"Die neue Antwort lautet: {newAnswer}. Ist das korrekt? Sagen Sie ja, um zu bestätigen.");
-            Console.WriteLine($"Die neue Antwort lautet: {newAnswer}. Ist das korrekt? Sagen Sie 'ja', um zu bestätigen.");
+            response = $"{LanguageManager.GetString("MANAGE_Check_Answer")}".Replace("$$$",newAnswer);
 
-            string confirmation = await GetAudioInputAsync("Bitte bestätigen Sie mit 'ja' oder 'nein'.");
+            _textToSpeechService.Speak(response);
+            Console.WriteLine(response);
+
+            string confirmation = await GetAudioInputAsync($"{LanguageManager.GetString("MANAGE_Commit_new_Answer")}");
 
             if (confirmation.ToLower() == "ja")
             {
                 _databaseManager.AddNewCommand(newCommand, newAnswer);
-                return "Neuer Befehl wurde erfolgreich hinzugefügt.";
+                return $"{LanguageManager.GetString("MANAGE_Succsess")}";
             }
             else
             {
-                return "Vorgang abgebrochen. Der neue Befehl wurde nicht hinzugefügt.";
+                return $"{LanguageManager.GetString("MANAGE_Cancel")}";
             }
         }
 
         private async Task<string> DeleteCommandAsync()
         {
-            _textToSpeechService.Speak("Welchen Befehl möchtest du löschen?");
-            Console.WriteLine("Welchen Befehl möchtest du löschen?");
+            string response = $"{LanguageManager.GetString("MANAGE_Delete_Command_Input")}";
+            _textToSpeechService.Speak(response);
+            Console.WriteLine(response);
 
-            string commandToDelete = await GetAudioInputAsync("Bitte nenne den Befehl.");
+            string commandToDelete = await GetAudioInputAsync($"{LanguageManager.GetString("MANAGE_Delete_Command_CTA")}");
 
             if (_databaseManager.CommandExists(commandToDelete))
             {
                 _databaseManager.DeleteCommand(commandToDelete);
-                return $"Der Befehl '{commandToDelete}' wurde erfolgreich gelöscht.";
+                response = $"{LanguageManager.GetString("MANAGE_Delete_Succsess")}".Replace("$$$", commandToDelete);
+                return response;
             }
             else
             {
-                _textToSpeechService.Speak($"Der Befehl '{commandToDelete}' existiert nicht.");
-                return $"Der Befehl '{commandToDelete}' existiert nicht.";
+                response = $"{LanguageManager.GetString("MANAGE_Delete_Cancel")}".Replace("$$$", commandToDelete);
+                return response;
             }
         }
 
         private async Task<string> GetAudioInputAsync(string prompt)
         {
+            _textToSpeechService.Speak(prompt);
             Console.WriteLine(prompt);
 
             AudioPlayerService audioPlayerService = new AudioPlayerService();

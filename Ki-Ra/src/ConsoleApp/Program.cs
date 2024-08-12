@@ -15,7 +15,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        Console.WriteLine("Willkommen! Die App wird gestartet. Bitte haben Sie einen Moment Geduld.");
+        Console.WriteLine($"{LanguageManager.GetString("INFO_Initial_Greeting_TXT")}");
 
         var audioPlayerService = new AudioPlayerService();
         var backgroundMusicPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "src","Media", "background_music.mp3");
@@ -33,7 +33,7 @@ class Program
 
         if (!Directory.Exists(modelsDirectory))
         {
-            throw new DirectoryNotFoundException($"Das Modellverzeichnis wurde nicht gefunden: {modelsDirectory}");
+            throw new DirectoryNotFoundException($"{LanguageManager.GetString("ERROR_Modeldirectory_not_found")} {modelsDirectory}");
         }
 
         var modelDirectories = Directory.GetDirectories(modelsDirectory);
@@ -43,11 +43,11 @@ class Program
         if (modelDirectories.Length == 1)
         {
             selectedModelPath = modelDirectories[0];
-            Console.WriteLine($"Automatisch gewähltes Modell: {new DirectoryInfo(selectedModelPath).Name}");
+            Console.WriteLine($"{LanguageManager.GetString("INFO_Automatically_chosen_Model")} {new DirectoryInfo(selectedModelPath).Name}");
         }
         else
         {
-            Console.WriteLine("Welches Model soll geladen werden?");
+            Console.WriteLine($"{LanguageManager.GetString("INPUT_Chose_Model")}");
             for (int i = 0; i < modelDirectories.Length; i++)
             {
                 var dirInfo = new DirectoryInfo(modelDirectories[i]);
@@ -58,11 +58,11 @@ class Program
             int choice;
             do
             {
-                Console.Write($"Bitte wählen Sie ein Modell (1-{modelDirectories.Length}): ");
+                Console.Write($"{LanguageManager.GetString("INPUT_Chose_Model_Range")}{modelDirectories.Length}): ");
             } while (!int.TryParse(Console.ReadLine(), out choice) || choice < 1 || choice > modelDirectories.Length);
 
             selectedModelPath = modelDirectories[choice - 1];
-            Console.WriteLine($"Gewähltes Modell: {new DirectoryInfo(selectedModelPath).Name}");
+            Console.WriteLine($"{LanguageManager.GetString("INFO_chosen_Model")} {new DirectoryInfo(selectedModelPath).Name}");
         }
 
         // Speicherverwaltung optimieren
@@ -100,35 +100,35 @@ class Program
         {
             var textToSpeechService = serviceProvider.GetRequiredService<TextToSpeechService>();
 
-            textToSpeechService.Speak("Hallo ich bin Kira, dein persönlicher KI-Assistent. Ich lade meine Datenbanken und stehe dir gleich zur Verfügung. Bitte hab einen Moment Geduld.");
+            textToSpeechService.Speak($"{LanguageManager.GetString("INFO_Initial_Greeting_VOICE")}");
 
             // Lade das Modell einmal
-            Console.WriteLine("Lade Modell...");
+            Console.WriteLine($"{LanguageManager.GetString("INFO_Loading_Model")}");
             var model = serviceProvider.GetRequiredService<Model>();
-            Console.WriteLine("Modell erfolgreich geladen.");
+            Console.WriteLine($"{LanguageManager.GetString("INFO_Model_loaded")}");
 
             var voiceRecognitionService = serviceProvider.GetRequiredService<VoiceRecognitionService>();
             var audioRecordingService = serviceProvider.GetRequiredService<AudioRecordingService>();
             var command = serviceProvider.GetRequiredService<RecordAndTranscribeCommand>();
 
-            Console.WriteLine("Erstelle Recognizer...");
+            Console.WriteLine($"{LanguageManager.GetString("INFO_Loading_Recognizer")}");
             VoskRecognizer recognizer = new VoskRecognizer(model, 16000.0f);
-            Console.WriteLine("Recognizer erfolgreich erstellt.");
+            Console.WriteLine($"{LanguageManager.GetString("INFO_Recognizer_loaded")}");
 
-            Console.WriteLine("Initialisiere VoiceRecognitionService...");
+            Console.WriteLine($"{LanguageManager.GetString("INFO_Init_Recognitionservice")}");
             voiceRecognitionService.Initialize(recognizer);
-            Console.WriteLine("VoiceRecognitionService initialisiert.");
+            Console.WriteLine($"{LanguageManager.GetString("INFO_Init_Recognitionservice_done")}");
 
             audioPlayerService.StopBackgroundMusic();
-            textToSpeechService.Speak("Die App ist jetzt bereit.");
+            textToSpeechService.Speak($"{LanguageManager.GetString("INFO_Ready_VOICE")}");
 
             await command.ExecuteAsync();
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Ein Fehler ist aufgetreten: {ex.GetType().Name}");
-            Console.WriteLine($"Nachricht: {ex.Message}");
-            Console.WriteLine($"StackTrace: {ex.StackTrace}");
+            Console.WriteLine($"{LanguageManager.GetString("ERROR_occured")} {ex.GetType().Name}");
+            Console.WriteLine($"{LanguageManager.GetString("ERROR_Message")} {ex.Message}");
+            Console.WriteLine($"{LanguageManager.GetString("ERROR_StackTrace")} {ex.StackTrace}");
         }
         finally
         {

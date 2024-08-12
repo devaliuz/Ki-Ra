@@ -60,6 +60,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <EmbeddedResource Update="src\Language\texts.de.resx">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </EmbeddedResource>
 	  <EmbeddedResource Update="src\Language\texts.resx">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	    <LastGenOutput>texts.Designer.cs</LastGenOutput>

@@ -97,7 +97,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Initial_Greeting_TXT" xml:space="preserve">
+  <data name="INFO_Initial_Greeting_TXT" xml:space="preserve">
     <value></value>
   </data>
   <data name="ERROR_Modeldirectory_not_found" xml:space="preserve">
@@ -115,7 +115,7 @@
   <data name="INFO_chosen_Model" xml:space="preserve">
     <value></value>
   </data>
-  <data name="Initial_Greeting_VOICE" xml:space="preserve">
+  <data name="INFO_Initial_Greeting_VOICE" xml:space="preserve">
     <value></value>
   </data>
   <data name="INFO_Loading_Model" xml:space="preserve">
@@ -136,7 +136,7 @@
   <data name="INFO_Init_Recognitionservice_done" xml:space="preserve">
     <value></value>
   </data>
-  <data name="Ready_VOICE" xml:space="preserve">
+  <data name="INFO_Ready_VOICE" xml:space="preserve">
     <value></value>
   </data>
   <data name="ERROR_occured" xml:space="preserve">
@@ -164,6 +164,72 @@
     <value></value>
   </data>
   <data name="INFO_No_Voirce_Recognized" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="INFO_Didnt_Understand" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Commands" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Didnt_Understand" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Ask_For_Answer" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="GENERAL_Add" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="GENERAL_Delete" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="COMMAND_Help" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_New_Command" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Waiting_for_new_Command" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Comand_Exists" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Adding_New_Command" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Add_Answer" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Check_Answer" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Commit_new_Answer" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Succsess" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Cancel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Delete_Command_Input" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Delete_Command_CTA" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Delete_Succsess" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="MANAGE_Delete_Cancel" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="ERROR_LangModel_Directory_not_found" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="INFO_UI_Language" xml:space="preserve">
     <value></value>
   </data>
 </root>

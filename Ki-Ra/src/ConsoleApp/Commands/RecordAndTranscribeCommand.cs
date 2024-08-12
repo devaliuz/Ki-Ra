@@ -40,33 +40,31 @@ namespace KiRa.ConsoleApp.Commands
         {
             while (true)
             {
-                Console.WriteLine("Warte auf Triggerwort 'Kira'...");
+                Console.WriteLine($"{LanguageManager.GetString("INFO_Waiting_for_Trigger")}");
                 await WaitForTriggerWord();
 
                 // Spiele Audiosignal ab
                 PlayTriggerSound();
 
-                Console.WriteLine("Triggerwort erkannt. Höre auf Befehl...");
+                Console.WriteLine($"{LanguageManager.GetString("INFO_Triggered")}");
                 var audioData = await _audioRecordingService.RecordAudioWithThresholdAsync(5000, -50, 1000);
 
                 if (audioData.Length > 0)
                 {
-                    Console.WriteLine("Verarbeite Audio...");
+                    Console.WriteLine($"{LanguageManager.GetString("INFO_Convert_Audio")}");
                     string result = await _voiceRecognitionService.RecognizeSpeechAsync(audioData);
                     string extractedText = JsonUtility.ExtractTextFromJson(result);
-                    Console.WriteLine($"Verstandener Befehl: {extractedText}");
+                    Console.WriteLine($"{LanguageManager.GetString("INFO_Recognized_Order")} {extractedText}");
                     string response = await _commandProcessingService.ProcessCommandAsync(extractedText);
-                    Console.WriteLine($"Antwort: {response}");
+                    Console.WriteLine($"{LanguageManager.GetString("ANSWER")} {response}");
                     _textToSpeechService.Speak(response);
                 }
                 else
                 {
-                    Console.WriteLine("Keine Spracheingabe erkannt.");
+                    Console.WriteLine($"{LanguageManager.GetString("INFO_No_Voirce_Recognized")}");
                 }
             }
         }
-
-        //TODO RESX WEITER FÜLLEN
 
         private async Task WaitForTriggerWord()
         {
