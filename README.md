@@ -64,7 +64,7 @@ Ki-Ra is a voice-controlled assistant built on .NET 8 and C#. It utilizes the Vo
 * **"Tell a Joke":** Ki-Ra tells a joke.
 * **"Good Bye":** Ki-Ra says goodbye.
 * **"Help":** Lists all available commands.
-* **"Befehle verwalten":** Allows you to add, delete or modify commands and their responses
+* **"Manage Commands":** Allows you to add, delete or modify commands and their responses
 
 ## Notes
 
