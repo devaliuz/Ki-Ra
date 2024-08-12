@@ -61,7 +61,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Answer: ähnelt.
         /// </summary>
         internal static string ANSWER {
             get {
@@ -70,7 +70,412 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Take care! See you soon. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_auf_wiedersehen_1 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_auf_wiedersehen_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Take care of yourself! We&apos;ll see each other again. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_auf_wiedersehen_2 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_auf_wiedersehen_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die All the best! Hope to see you soon. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_auf_wiedersehen_3 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_auf_wiedersehen_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Have a nice day! Until next time. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_auf_wiedersehen_4 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_auf_wiedersehen_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Stay healthy! Looking forward to our next meeting. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_auf_wiedersehen_5 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_auf_wiedersehen_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Goodbye! I hope we&apos;ll talk again soon. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_auf_wiedersehen_6 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_auf_wiedersehen_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bye! See you next time. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_auf_wiedersehen_7 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_auf_wiedersehen_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s orange and sounds like a parrot? A carrot! ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_1 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s the opposite of a hot dog? A cold cat. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_10 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s an astronaut&apos;s favorite food? UFOs (Unidentified Fried Objects). ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_11 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s the difference between a piano and a fish? You can tune a piano, but you can&apos;t tuna fish! ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_12 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Why don&apos;t giraffes wear socks? Because they have long necks. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_13 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s a snowman&apos;s favorite food? Ice-cicles. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_14 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Why don&apos;t ants go to church? Because they&apos;re in-sects. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_15 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s a computer&apos;s favorite snack? Microchips. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_16 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_16", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s a programmer&apos;s favorite drink? Java. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_17 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Why are tomatoes so red? Because they&apos;re embarrassed that they can&apos;t swim. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_18 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_18", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s a ghost&apos;s favorite food? Boo-sghetti. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_19 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_19", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Why can&apos;t ghosts lie? Because you can see right through them. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_2 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Why don&apos;t birds wear shoes? Because they already have feathers. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_20 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_20", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What does a pirate say at a computer? Shiver me timbers! ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_3 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s a tree&apos;s favorite drink? Root beer. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_4 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s green and hops through the woods? A frog in pajamas. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_5 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Why do bees wear helmets? Because they might dissolve into thin air. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_6 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What&apos;s black and white and sits on a tree? A hungry panda. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_7 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die What does a mathematician say to his friend? I&apos;m so happy, I could say Pi-times-thumb! ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_8 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Why can&apos;t fish play basketball? Because they&apos;re afraid of the net. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_erzaehle_einen_witz_9 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Good day! What can I do for you? ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_hallo_1 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_hallo_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hi! How can I assist you? ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_hallo_2 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_hallo_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Greetings! Nice to hear from you. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_hallo_3 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_hallo_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Howdy! What brings you here? ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_hallo_4 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_hallo_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Morning! Nice to see you. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_hallo_5 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_hallo_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hello! How can I help you? ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_hallo_6 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_hallo_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Cheers, you little rascal. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_hallo_7 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_hallo_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die I&apos;m doing great, thank you! ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_wie_geht_es_dir_1 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_wie_geht_es_dir_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die I&apos;m in a great mood, and you? ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_wie_geht_es_dir_2 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_wie_geht_es_dir_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die I feel fantastic, thanks for asking. ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_wie_geht_es_dir_3 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_wie_geht_es_dir_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Everything&apos;s great with me, how about you? ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_wie_geht_es_dir_4 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_wie_geht_es_dir_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die I&apos;m in top form, and you? ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_wie_geht_es_dir_5 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_wie_geht_es_dir_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die I&apos;m doing well, thanks for asking! ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_wie_geht_es_dir_6 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_wie_geht_es_dir_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Excellent, and how about you? ähnelt.
+        /// </summary>
+        internal static string COMMAND_ANSW_wie_geht_es_dir_7 {
+            get {
+                return ResourceManager.GetString("COMMAND_ANSW_wie_geht_es_dir_7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die goodbye ähnelt.
+        /// </summary>
+        internal static string COMMAND_auf_wiedersehen {
+            get {
+                return ResourceManager.GetString("COMMAND_auf_wiedersehen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die manage commands ähnelt.
+        /// </summary>
+        internal static string COMMAND_befehle_verwalten {
+            get {
+                return ResourceManager.GetString("COMMAND_befehle_verwalten", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die tell a joke ähnelt.
+        /// </summary>
+        internal static string COMMAND_erzaehle_einen_witz {
+            get {
+                return ResourceManager.GetString("COMMAND_erzaehle_einen_witz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die hello ähnelt.
+        /// </summary>
+        internal static string COMMAND_hallo {
+            get {
+                return ResourceManager.GetString("COMMAND_hallo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die I have internalized the following commands: ähnelt.
         /// </summary>
         internal static string COMMAND_Help {
             get {
@@ -79,7 +484,493 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die adieu ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_auf_wiedersehen_adieu {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_auf_wiedersehen_adieu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die talk to you later ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_auf_wiedersehen_auf_wiederhoeren {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_auf_wiedersehen_auf_wiederhoeren", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die see you soon ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_auf_wiedersehen_bis_bald {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_auf_wiedersehen_bis_bald", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die see you later ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_auf_wiedersehen_bis_dann {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_auf_wiedersehen_bis_dann", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die until next time ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_auf_wiedersehen_bis_zum_naechsten_mal {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_auf_wiedersehen_bis_zum_naechsten_mal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die ciao ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_auf_wiedersehen_ciao {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_auf_wiedersehen_ciao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die farewell ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_auf_wiedersehen_leb_wohl {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_auf_wiedersehen_leb_wohl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die take care ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_auf_wiedersehen_machs_gut {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_auf_wiedersehen_machs_gut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die have a nice day ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_auf_wiedersehen_schoenen_tag_noch {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_auf_wiedersehen_schoenen_tag_noch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die bye ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_auf_wiedersehen_tschuess {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_auf_wiedersehen_tschuess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die change command ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_befehle_verwalten_aendern {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_befehle_verwalten_aendern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die add command ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_befehle_verwalten_hinzufuegen {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_befehle_verwalten_hinzufuegen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die change command ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_befehle_verwalten_kommando_aendern {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_befehle_verwalten_kommando_aendern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die add command ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_befehle_verwalten_kommando_hinzufuegen {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_befehle_verwalten_kommando_hinzufuegen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die delete command ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_befehle_verwalten_kommando_loeschen {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_befehle_verwalten_kommando_loeschen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die manage commands ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_befehle_verwalten_kommandos {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_befehle_verwalten_kommandos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die delete command ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_befehle_verwalten_loeschen {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_befehle_verwalten_loeschen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die management ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_befehle_verwalten_verwaltung {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_befehle_verwalten_verwaltung", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die make me laugh ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_erzaehle_einen_witz_bring_mich_zum_lachen {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_erzaehle_einen_witz_bring_mich_zum_lachen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die tell me a joke ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_erzaehle_einen_witz_erzaehl {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_erzaehle_einen_witz_erzaehl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die tell me something funny ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_erzaehle_einen_witz_erzaehle_etwas_komisches {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_erzaehle_einen_witz_erzaehle_etwas_komisches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die something funny ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_erzaehle_einen_witz_etwas_lustiges {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_erzaehle_einen_witz_etwas_lustiges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die joke ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_erzaehle_einen_witz_joke {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_erzaehle_einen_witz_joke", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die make a joke ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_erzaehle_einen_witz_mach_einen_witz {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_erzaehle_einen_witz_mach_einen_witz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die jest ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_erzaehle_einen_witz_scherz {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_erzaehle_einen_witz_scherz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die be funny ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_erzaehle_einen_witz_sei_lustig {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_erzaehle_einen_witz_sei_lustig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die be humorous ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_erzaehle_einen_witz_sei_witzig {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_erzaehle_einen_witz_sei_witzig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die joke ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_erzaehle_einen_witz_witz {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_erzaehle_einen_witz_witz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die jokes ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_erzaehle_einen_witz_witze {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_erzaehle_einen_witz_witze", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die to laugh ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_erzaehle_einen_witz_zum_lachen {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_erzaehle_einen_witz_zum_lachen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die greetings ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_hallo_gruessgott {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_hallo_gruessgott", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die g&apos;day ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_hallo_gruezi {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_hallo_gruezi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die good day ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_hallo_gutentag {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_hallo_gutentag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die hey ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_hallo_hey {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_hallo_hey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die hi ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_hallo_hi {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_hallo_hi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die morning ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_hallo_moin {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_hallo_moin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die hiya ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_hallo_sali {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_hallo_sali", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die howdy ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_hallo_servus {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_hallo_servus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die what are your functions ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_was_kannst_du_deinefunktionen {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_was_kannst_du_deinefunktionen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die abilities ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_was_kannst_du_faehigkeiten {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_was_kannst_du_faehigkeiten", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die functions ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_was_kannst_du_funktionen {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_was_kannst_du_funktionen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die help ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_was_kannst_du_hilfe {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_was_kannst_du_hilfe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die what do you do ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_was_kannst_du_wasmachstdu {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_was_kannst_du_wasmachstdu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die how can you help me ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_was_kannst_du_wiehelfen {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_was_kannst_du_wiehelfen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die show me your abilities ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_was_kannst_du_zeigefaehigkeiten {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_was_kannst_du_zeigefaehigkeiten", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die all good with you ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_wie_geht_es_dir_allesgut {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_wie_geht_es_dir_allesgut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die everything alright ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_wie_geht_es_dir_allesklar {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_wie_geht_es_dir_allesklar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die are you in good spirits ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_wie_geht_es_dir_gutdrauf {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_wie_geht_es_dir_gutdrauf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die what&apos;s your mood ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_wie_geht_es_dir_stimmung {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_wie_geht_es_dir_stimmung", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die how do you feel ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_wie_geht_es_dir_wiefuehlstdu {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_wie_geht_es_dir_wiefuehlstdu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die how&apos;s it going ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_wie_geht_es_dir_wiegehts {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_wie_geht_es_dir_wiegehts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die how&apos;s it hanging ähnelt.
+        /// </summary>
+        internal static string COMMAND_SYN_wie_geht_es_dir_wielaeufts {
+            get {
+                return ResourceManager.GetString("COMMAND_SYN_wie_geht_es_dir_wielaeufts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die what can you do ähnelt.
+        /// </summary>
+        internal static string COMMAND_was_kannst_du {
+            get {
+                return ResourceManager.GetString("COMMAND_was_kannst_du", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die how are you ähnelt.
+        /// </summary>
+        internal static string COMMAND_wie_geht_es_dir {
+            get {
+                return ResourceManager.GetString("COMMAND_wie_geht_es_dir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die The language model directory was not found: ähnelt.
         /// </summary>
         internal static string ERROR_LangModel_Directory_not_found {
             get {
@@ -88,7 +979,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Message: ähnelt.
         /// </summary>
         internal static string ERROR_Message {
             get {
@@ -97,7 +988,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die The model directory was not found: ähnelt.
         /// </summary>
         internal static string ERROR_Modeldirectory_not_found {
             get {
@@ -106,7 +997,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die An error has occurred: ähnelt.
         /// </summary>
         internal static string ERROR_occured {
             get {
@@ -115,7 +1006,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die StackTrace: ähnelt.
         /// </summary>
         internal static string ERROR_StackTrace {
             get {
@@ -124,7 +1015,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Add ähnelt.
         /// </summary>
         internal static string GENERAL_Add {
             get {
@@ -133,7 +1024,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Delete ähnelt.
         /// </summary>
         internal static string GENERAL_Delete {
             get {
@@ -142,7 +1033,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Automatically selected model: ähnelt.
         /// </summary>
         internal static string INFO_Automatically_chosen_Model {
             get {
@@ -151,7 +1042,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Selected model: ähnelt.
         /// </summary>
         internal static string INFO_chosen_Model {
             get {
@@ -160,7 +1051,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Processing audio... ähnelt.
         /// </summary>
         internal static string INFO_Convert_Audio {
             get {
@@ -169,7 +1060,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Sorry, I didn&apos;t understand that. ähnelt.
         /// </summary>
         internal static string INFO_Didnt_Understand {
             get {
@@ -178,7 +1069,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Initializing VoiceRecognitionService... ähnelt.
         /// </summary>
         internal static string INFO_Init_Recognitionservice {
             get {
@@ -187,7 +1078,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die VoiceRecognitionService initialized. ähnelt.
         /// </summary>
         internal static string INFO_Init_Recognitionservice_done {
             get {
@@ -196,7 +1087,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Welcome! The app is starting. Please be patient for a moment. ähnelt.
         /// </summary>
         internal static string INFO_Initial_Greeting_TXT {
             get {
@@ -205,7 +1096,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Hello, I&apos;m Kira, your personal AI assistant. I&apos;m loading my databases and will be available shortly. Please be patient for a moment. ähnelt.
         /// </summary>
         internal static string INFO_Initial_Greeting_VOICE {
             get {
@@ -214,7 +1105,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Loading model... ähnelt.
         /// </summary>
         internal static string INFO_Loading_Model {
             get {
@@ -223,7 +1114,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Creating recognizer... ähnelt.
         /// </summary>
         internal static string INFO_Loading_Recognizer {
             get {
@@ -232,7 +1123,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Model successfully loaded. ähnelt.
         /// </summary>
         internal static string INFO_Model_loaded {
             get {
@@ -241,7 +1132,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die No voice input recognized. ähnelt.
         /// </summary>
         internal static string INFO_No_Voirce_Recognized {
             get {
@@ -250,7 +1141,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die The app is now ready. ähnelt.
         /// </summary>
         internal static string INFO_Ready_VOICE {
             get {
@@ -259,7 +1150,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Understood command: ähnelt.
         /// </summary>
         internal static string INFO_Recognized_Order {
             get {
@@ -268,7 +1159,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Recognizer successfully created. ähnelt.
         /// </summary>
         internal static string INFO_Recognizer_loaded {
             get {
@@ -277,7 +1168,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Trigger word recognized. Listening for command... ähnelt.
         /// </summary>
         internal static string INFO_Triggered {
             get {
@@ -286,7 +1177,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die User interface set to English. ähnelt.
         /// </summary>
         internal static string INFO_UI_Language {
             get {
@@ -295,7 +1186,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Waiting for trigger word &apos;Kira&apos;... ähnelt.
         /// </summary>
         internal static string INFO_Waiting_for_Trigger {
             get {
@@ -304,7 +1195,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Which model should be loaded? ähnelt.
         /// </summary>
         internal static string INPUT_Chose_Model {
             get {
@@ -313,7 +1204,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Please select a model (1- ähnelt.
         /// </summary>
         internal static string INPUT_Chose_Model_Range {
             get {
@@ -322,7 +1213,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Please say the answer for this command. ähnelt.
         /// </summary>
         internal static string MANAGE_Add_Answer {
             get {
@@ -331,7 +1222,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die New command is being created. ähnelt.
         /// </summary>
         internal static string MANAGE_Adding_New_Command {
             get {
@@ -340,7 +1231,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Please say &apos;Add&apos; or &apos;Delete&apos;. ähnelt.
         /// </summary>
         internal static string MANAGE_Ask_For_Answer {
             get {
@@ -349,7 +1240,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Operation cancelled. The new command was not added. ähnelt.
         /// </summary>
         internal static string MANAGE_Cancel {
             get {
@@ -358,7 +1249,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die The new answer is: $$$. Is that correct? Say yes to confirm. ähnelt.
         /// </summary>
         internal static string MANAGE_Check_Answer {
             get {
@@ -367,7 +1258,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die This command already exists. We&apos;re adding a new answer. ähnelt.
         /// </summary>
         internal static string MANAGE_Comand_Exists {
             get {
@@ -376,7 +1267,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Do you want to add new commands or answers, or delete existing commands? ähnelt.
         /// </summary>
         internal static string MANAGE_Commands {
             get {
@@ -385,7 +1276,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Please confirm with &apos;yes&apos; or &apos;no&apos;. ähnelt.
         /// </summary>
         internal static string MANAGE_Commit_new_Answer {
             get {
@@ -394,7 +1285,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die The command &apos;$$$&apos; does not exist. ähnelt.
         /// </summary>
         internal static string MANAGE_Delete_Cancel {
             get {
@@ -403,7 +1294,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Please name the command. ähnelt.
         /// </summary>
         internal static string MANAGE_Delete_Command_CTA {
             get {
@@ -412,7 +1303,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Which command do you want to delete? ähnelt.
         /// </summary>
         internal static string MANAGE_Delete_Command_Input {
             get {
@@ -421,7 +1312,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die The command &apos;$$$&apos; was successfully deleted. ähnelt.
         /// </summary>
         internal static string MANAGE_Delete_Succsess {
             get {
@@ -430,7 +1321,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die I didn&apos;t understand you. Please say &apos;Add&apos; or &apos;Delete&apos;. ähnelt.
         /// </summary>
         internal static string MANAGE_Didnt_Understand {
             get {
@@ -439,7 +1330,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Okay, let&apos;s add a new command. ähnelt.
         /// </summary>
         internal static string MANAGE_New_Command {
             get {
@@ -448,7 +1339,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die New command was successfully added. ähnelt.
         /// </summary>
         internal static string MANAGE_Succsess {
             get {
@@ -457,7 +1348,7 @@ namespace Ki_Ra.src.Language {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die  ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Please say the name of the new command. ähnelt.
         /// </summary>
         internal static string MANAGE_Waiting_for_new_Command {
             get {

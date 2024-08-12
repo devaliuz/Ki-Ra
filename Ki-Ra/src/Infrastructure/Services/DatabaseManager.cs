@@ -22,110 +22,164 @@ namespace KiRa.Infrastructure.Services
             {
                 if (context.Database.EnsureCreated())
                 {
-                    InitializeBasicCommands();
+                    InitializeDefaultCommands();
                     InitializeSpecialCommands();
                 }
             }
         }
 
-        private void InitializeBasicCommands()
+        private void InitializeDefaultCommands()
         {
             // Hallo
-            AddCommandWithSynonymsAndAnswers("hallo", new List<string>
-            {
-                "hallo", "hi", "hey", "grüß gott", "guten tag", "servus", "moin", "grüezi", "sali"
-            }, new List<string>
-            {
-                "Guten Tag! Was kann ich für Sie tun?",
-                "Hi! Wie kann ich Ihnen behilflich sein?",
-                "Grüß Gott! Freut mich, Sie zu hören.",
-                "Servus! Was führt Sie zu mir?",
-                "Moin! Schön, dass Sie da sind.",
-                "Hallo! Wie kann ich Ihnen helfen?",
-                "Cheers du kleiner Sack."
-            });
+            AddCommandWithSynonymsAndAnswers(
+                LanguageManager.GetString("COMMAND_hallo"),
+                new List<string>
+                {
+                LanguageManager.GetString("COMMAND_SYN_hallo_hi"),
+                LanguageManager.GetString("COMMAND_SYN_hallo_hey"),
+                LanguageManager.GetString("COMMAND_SYN_hallo_gruessgott"),
+                LanguageManager.GetString("COMMAND_SYN_hallo_gutentag"),
+                LanguageManager.GetString("COMMAND_SYN_hallo_servus"),
+                LanguageManager.GetString("COMMAND_SYN_hallo_moin"),
+                LanguageManager.GetString("COMMAND_SYN_hallo_gruezi"),
+                LanguageManager.GetString("COMMAND_SYN_hallo_sali")
+                },
+                new List<string>
+                {
+                LanguageManager.GetString("COMMAND_ANSW_hallo_1"),
+                LanguageManager.GetString("COMMAND_ANSW_hallo_2"),
+                LanguageManager.GetString("COMMAND_ANSW_hallo_3"),
+                LanguageManager.GetString("COMMAND_ANSW_hallo_4"),
+                LanguageManager.GetString("COMMAND_ANSW_hallo_5"),
+                LanguageManager.GetString("COMMAND_ANSW_hallo_6"),
+                LanguageManager.GetString("COMMAND_ANSW_hallo_7")
+                });
 
             // Wie geht es dir?
-            AddCommandWithSynonymsAndAnswers("wie geht es dir", new List<string>
-            {
-                "wie geht es dir", "wie geht's", "alles klar", "wie läuft's", "wie fühlst du dich",
-                "wie ist deine stimmung", "bist du gut drauf", "alles gut bei dir"
-            }, new List<string>
-            {
-                "Mir geht es hervorragend, vielen Dank!",
-                "Ich bin bestens gelaunt, und selbst?",
-                "Ich fühle mich großartig, danke der Nachfrage.",
-                "Alles bestens bei mir, wie sieht's bei Ihnen aus?",
-                "Ich bin in Topform, und Sie?",
-                "Mir geht es gut, danke der Nachfrage!",
-                "Ausgezeichnet, und Ihnen?"
-            });
+            AddCommandWithSynonymsAndAnswers(
+                LanguageManager.GetString("COMMAND_wie_geht_es_dir"),
+                new List<string>
+                {
+                LanguageManager.GetString("COMMAND_SYN_wie_geht_es_dir_wiegehts"),
+                LanguageManager.GetString("COMMAND_SYN_wie_geht_es_dir_allesklar"),
+                LanguageManager.GetString("COMMAND_SYN_wie_geht_es_dir_wielaeufts"),
+                LanguageManager.GetString("COMMAND_SYN_wie_geht_es_dir_wiefuehlstdu"),
+                LanguageManager.GetString("COMMAND_SYN_wie_geht_es_dir_stimmung"),
+                LanguageManager.GetString("COMMAND_SYN_wie_geht_es_dir_gutdrauf"),
+                LanguageManager.GetString("COMMAND_SYN_wie_geht_es_dir_allesgut")
+                },
+                new List<string>
+                {
+                LanguageManager.GetString("COMMAND_ANSW_wie_geht_es_dir_1"),
+                LanguageManager.GetString("COMMAND_ANSW_wie_geht_es_dir_2"),
+                LanguageManager.GetString("COMMAND_ANSW_wie_geht_es_dir_3"),
+                LanguageManager.GetString("COMMAND_ANSW_wie_geht_es_dir_4"),
+                LanguageManager.GetString("COMMAND_ANSW_wie_geht_es_dir_5"),
+                LanguageManager.GetString("COMMAND_ANSW_wie_geht_es_dir_6"),
+                LanguageManager.GetString("COMMAND_ANSW_wie_geht_es_dir_7")
+                });
 
-            //Witz
-            AddCommandWithSynonymsAndAnswers("erzähle einen witz", new List<string>
-            {
-                "erzähle einen witz", "erzähl einen witz", "witz", "witze", "scherz", "joke",
-                "etwas lustiges", "zum lachen", "sei lustig", "mach einen witz",
-                "bringen sie mich zum lachen", "sei witzig", "erzähle etwas komisches"
-            }, new List<string>
-            {
-                "Was ist orange und klingt wie ein Papagei? Eine Karotte!",
-                "Warum können Geister nicht lügen? Weil man sie durchschaut.",
-                "Was sagt ein Pirat am Computer? Shiver me timbers!",
-                "Was ist das Lieblingsgetränk eines Baumes? Wurzelbier.",
-                "Was ist grün und hüpft durch den Wald? Ein Frosch im Schlafanzug.",
-                "Warum tragen Bienen Helme? Weil sie sich in Luft auflösen.",
-                "Was ist schwarz-weiß und sitzt auf einem Baum? Ein hungriger Panda.",
-                "Was sagt ein Mathematiker zu seinem Freund? Ich bin so glücklich, dass ich Pi mal Daumen sagen kann.",
-                "Warum können Fische nicht Basketball spielen? Weil sie Angst vor dem Netz haben.",
-                "Was ist das Gegenteil von einem Hotdog? Ein kalter Kater.",
-                "Was ist das Lieblingsessen eines Astronauten? Ufos.",
-                "Was ist der Unterschied zwischen einem Klavier und einem Fisch? Man kann ein Klavier stimmen, aber man kann einen Fisch nicht klavieren.",
-                "Warum tragen Giraffen keine Socken? Weil sie lange Hälse haben.",
-                "Was ist das Lieblingsessen eines Schneemanns? Eiszapfen.",
-                "Warum gehen Ameisen nicht in die Kirche? Weil sie Insekten sind.",
-                "Was ist das Lieblingsessen eines Computers? Chips.",
-                "Was ist das Lieblingsgetränk eines Programmierers? Java.",
-                "Warum sind Tomaten so rot? Weil sie sich schämen, dass sie nicht schwimmen können.",
-                "Was ist das Lieblingsessen eines Geistes? Buh-Spaghetti.",
-                "Warum tragen Vögel keine Schuhe? Weil sie schon Federn haben."
-            });
+            // Erzähle einen Witz
+            AddCommandWithSynonymsAndAnswers(
+                LanguageManager.GetString("COMMAND_erzaehle_einen_witz"),
+                new List<string>
+                {
+                LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_erzaehl"),
+                LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_witz"),
+                LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_witze"),
+                LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_scherz"),
+                LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_joke"),
+                LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_etwas_lustiges"),
+                LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_zum_lachen"),
+                LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_sei_lustig"),
+                LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_mach_einen_witz"),
+                LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_bring_mich_zum_lachen"),
+                LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_sei_witzig"),
+                LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_erzaehle_etwas_komisches")
+                },
+                new List<string>
+                {
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_1"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_2"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_3"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_4"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_5"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_6"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_7"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_8"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_9"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_10"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_11"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_12"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_13"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_14"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_15"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_16"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_17"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_18"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_19"),
+                LanguageManager.GetString("COMMAND_ANSW_erzaehle_einen_witz_20")
+                });
 
             // Auf Wiedersehen
-            AddCommandWithSynonymsAndAnswers("auf wiedersehen", new List<string>
-            {
-                "auf wiedersehen", "tschüss", "bis bald", "ciao", "adieu", "mach's gut", "bis dann",
-                "leb wohl", "auf wiederhören", "bis zum nächsten mal", "schönen tag noch"
-            }, new List<string>
-            {
-                "Machen Sie es gut! Bis bald.",
-                "Passen Sie auf sich auf! Wir sehen uns.",
-                "Alles Gute! Hoffentlich bis bald.",
-                "Einen schönen Tag noch! Bis zum nächsten Mal.",
-                "Bleiben Sie gesund! Auf ein baldiges Wiedersehen.",
-                "Auf Wiedersehen! Ich hoffe, wir sprechen bald wieder.",
-                "Tschüss! Bis zum nächsten Mal."
-            });
+            AddCommandWithSynonymsAndAnswers(
+                LanguageManager.GetString("COMMAND_auf_wiedersehen"),
+                new List<string>
+                {
+                LanguageManager.GetString("COMMAND_SYN_auf_wiedersehen_tschuess"),
+                LanguageManager.GetString("COMMAND_SYN_auf_wiedersehen_bis_bald"),
+                LanguageManager.GetString("COMMAND_SYN_auf_wiedersehen_ciao"),
+                LanguageManager.GetString("COMMAND_SYN_auf_wiedersehen_adieu"),
+                LanguageManager.GetString("COMMAND_SYN_auf_wiedersehen_machs_gut"),
+                LanguageManager.GetString("COMMAND_SYN_auf_wiedersehen_bis_dann"),
+                LanguageManager.GetString("COMMAND_SYN_auf_wiedersehen_leb_wohl"),
+                LanguageManager.GetString("COMMAND_SYN_auf_wiedersehen_auf_wiederhoeren"),
+                LanguageManager.GetString("COMMAND_SYN_auf_wiedersehen_bis_zum_naechsten_mal"),
+                LanguageManager.GetString("COMMAND_SYN_auf_wiedersehen_schoenen_tag_noch")
+                },
+                new List<string>
+                {
+                LanguageManager.GetString("COMMAND_ANSW_auf_wiedersehen_1"),
+                LanguageManager.GetString("COMMAND_ANSW_auf_wiedersehen_2"),
+                LanguageManager.GetString("COMMAND_ANSW_auf_wiedersehen_3"),
+                LanguageManager.GetString("COMMAND_ANSW_auf_wiedersehen_4"),
+                LanguageManager.GetString("COMMAND_ANSW_auf_wiedersehen_5"),
+                LanguageManager.GetString("COMMAND_ANSW_auf_wiedersehen_6"),
+                LanguageManager.GetString("COMMAND_ANSW_auf_wiedersehen_7")
+                });
         }
 
         private void InitializeSpecialCommands()
         {
             // Befehle verwalten
-            AddCommandWithSynonyms("befehle verwalten", new List<string>
-            {
-                "befehle verwalten", "befehl hinzufügen", "befehl löschen", "befehl ändern",
-                "kommandos verwalten", "kommando hinzufügen", "kommando löschen", "kommando ändern",
-                "verwaltung"
-            });
+            AddCommandWithSynonyms(
+                LanguageManager.GetString("COMMAND_befehle_verwalten"),
+                new List<string>
+                {
+                    LanguageManager.GetString("COMMAND_SYN_befehle_verwalten_hinzufuegen"),
+                    LanguageManager.GetString("COMMAND_SYN_befehle_verwalten_loeschen"),
+                    LanguageManager.GetString("COMMAND_SYN_befehle_verwalten_aendern"),
+                    LanguageManager.GetString("COMMAND_SYN_befehle_verwalten_kommandos"),
+                    LanguageManager.GetString("COMMAND_SYN_befehle_verwalten_kommando_hinzufuegen"),
+                    LanguageManager.GetString("COMMAND_SYN_befehle_verwalten_kommando_loeschen"),
+                    LanguageManager.GetString("COMMAND_SYN_befehle_verwalten_kommando_aendern"),
+                    LanguageManager.GetString("COMMAND_SYN_befehle_verwalten_verwaltung")
+                });
 
             // Was kannst du
-            AddCommandWithSynonyms("was kannst du", new List<string>
-            {
-                "was kannst du", "hilfe", "funktionen", "fähigkeiten", "was sind deine funktionen",
-                "zeige mir deine fähigkeiten", "was machst du", "wie kannst du mir helfen"
-            });
+            AddCommandWithSynonyms(
+                LanguageManager.GetString("COMMAND_was_kannst_du"),
+                new List<string>
+                {
+                    LanguageManager.GetString("COMMAND_SYN_was_kannst_du_hilfe"),
+                    LanguageManager.GetString("COMMAND_SYN_was_kannst_du_funktionen"),
+                    LanguageManager.GetString("COMMAND_SYN_was_kannst_du_faehigkeiten"),
+                    LanguageManager.GetString("COMMAND_SYN_was_kannst_du_deinefunktionen"),
+                    LanguageManager.GetString("COMMAND_SYN_was_kannst_du_zeigefaehigkeiten"),
+                    LanguageManager.GetString("COMMAND_SYN_was_kannst_du_wasmachstdu"),
+                    LanguageManager.GetString("COMMAND_SYN_was_kannst_du_wiehelfen")
+                });
         }
-
 
         private void AddCommandWithSynonyms(string command, List<string> synonyms)
         {

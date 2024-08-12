@@ -1,235 +1,537 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-		Microsoft ResX Schema
+    <!--
+          Microsoft ResX Schema
 
-		Version 1.3
+          Version 1.3
 
-		The primary goals of this format is to allow a simple XML format 
-		that is mostly human readable. The generation and parsing of the 
-		various data types are done through the TypeConverter classes 
-		associated with the data types.
+          The primary goals of this format is to allow a simple XML format
+          that is mostly human readable. The generation and parsing of the
+          various data types are done through the TypeConverter classes
+          associated with the data types.
 
-		Example:
+          Example:
 
-		... ado.net/XML headers & schema ...
-		<resheader name="resmimetype">text/microsoft-resx</resheader>
-		<resheader name="version">1.3</resheader>
-		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-		<data name="Name1">this is my long string</data>
-		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-			[base64 mime encoded serialized .NET Framework object]
-		</data>
-		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-			[base64 mime encoded string representing a byte array form of the .NET Framework object]
-		</data>
+          ... ado.net/XML headers & schema ...
+          <resheader name="resmimetype">text/microsoft-resx</resheader>
+          <resheader name="version">1.3</resheader>
+          <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+          <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+          <data name="Name1">this is my long string</data>
+          <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+          <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+              [base64 mime encoded serialized .NET Framework object]
+          </data>
+          <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+              [base64 mime encoded string representing a byte array form of the .NET Framework object]
+          </data>
 
-		There are any number of "resheader" rows that contain simple 
-		name/value pairs.
+          There are any number of "resheader" rows that contain simple
+          name/value pairs.
 
-		Each data row contains a name, and value. The row also contains a 
-		type or mimetype. Type corresponds to a .NET class that support 
-		text/value conversion through the TypeConverter architecture. 
-		Classes that don't support this are serialized and stored with the 
-		mimetype set.
+          Each data row contains a name, and value. The row also contains a
+          type or mimetype. Type corresponds to a .NET class that support
+          text/value conversion through the TypeConverter architecture.
+          Classes that don't support this are serialized and stored with the
+          mimetype set.
 
-		The mimetype is used for serialized objects, and tells the 
-		ResXResourceReader how to depersist the object. This is currently not 
-		extensible. For a given mimetype the value must be set accordingly:
+          The mimetype is used for serialized objects, and tells the
+          ResXResourceReader how to depersist the object. This is currently not
+          extensible. For a given mimetype the value must be set accordingly:
 
-		Note - application/x-microsoft.net.object.binary.base64 is the format 
-		that the ResXResourceWriter will generate, however the reader can 
-		read any of the formats listed below.
+          Note - application/x-microsoft.net.object.binary.base64 is the format
+          that the ResXResourceWriter will generate, however the reader can
+          read any of the formats listed below.
 
-		mimetype: application/x-microsoft.net.object.binary.base64
-		value   : The object must be serialized with 
-			: System.Serialization.Formatters.Binary.BinaryFormatter
-			: and then encoded with base64 encoding.
+          mimetype: application/x-microsoft.net.object.binary.base64
+          value   : The object must be serialized with
+              : System.Serialization.Formatters.Binary.BinaryFormatter
+              : and then encoded with base64 encoding.
 
-		mimetype: application/x-microsoft.net.object.soap.base64
-		value   : The object must be serialized with 
-			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-			: and then encoded with base64 encoding.
+          mimetype: application/x-microsoft.net.object.soap.base64
+          value   : The object must be serialized with
+              : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+              : and then encoded with base64 encoding.
 
-		mimetype: application/x-microsoft.net.object.bytearray.base64
-		value   : The object must be serialized into a byte array 
-			: using a System.ComponentModel.TypeConverter
-			: and then encoded with base64 encoding.
-	-->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="data">
+          mimetype: application/x-microsoft.net.object.bytearray.base64
+          value   : The object must be serialized into a byte array
+              : using a System.ComponentModel.TypeConverter
+              : and then encoded with base64 encoding.
+      -->
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
             <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
             </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>1.3</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="INFO_Initial_Greeting_TXT" xml:space="preserve">
-    <value></value>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="INFO_Initial_Greeting_TXT" xml:space="preserve">
+    <value>Welcome! The app is starting. Please be patient for a moment.</value>
   </data>
-  <data name="ERROR_Modeldirectory_not_found" xml:space="preserve">
-    <value></value>
+    <data name="ERROR_Modeldirectory_not_found" xml:space="preserve">
+    <value>The model directory was not found:</value>
   </data>
-  <data name="INFO_Automatically_chosen_Model" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Automatically_chosen_Model" xml:space="preserve">
+    <value>Automatically selected model:</value>
   </data>
-  <data name="INPUT_Chose_Model" xml:space="preserve">
-    <value></value>
+    <data name="INPUT_Chose_Model" xml:space="preserve">
+    <value>Which model should be loaded?</value>
   </data>
-  <data name="INPUT_Chose_Model_Range" xml:space="preserve">
-    <value></value>
+    <data name="INPUT_Chose_Model_Range" xml:space="preserve">
+    <value>Please select a model (1-</value>
   </data>
-  <data name="INFO_chosen_Model" xml:space="preserve">
-    <value></value>
+    <data name="INFO_chosen_Model" xml:space="preserve">
+    <value>Selected model:</value>
   </data>
-  <data name="INFO_Initial_Greeting_VOICE" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Initial_Greeting_VOICE" xml:space="preserve">
+    <value>Hello, I'm Kira, your personal AI assistant. I'm loading my databases and will be available shortly. Please be patient for a moment.</value>
   </data>
-  <data name="INFO_Loading_Model" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Loading_Model" xml:space="preserve">
+    <value>Loading model...</value>
   </data>
-  <data name="INFO_Model_loaded" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Loading_Recognizer" xml:space="preserve">
+    <value>Creating recognizer...</value>
   </data>
-  <data name="INFO_Loading_Recognizer" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Model_loaded" xml:space="preserve">
+    <value>Model successfully loaded.</value>
   </data>
-  <data name="INFO_Recognizer_loaded" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Recognizer_loaded" xml:space="preserve">
+    <value>Recognizer successfully created.</value>
   </data>
-  <data name="INFO_Init_Recognitionservice" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Init_Recognitionservice" xml:space="preserve">
+    <value>Initializing VoiceRecognitionService...</value>
   </data>
-  <data name="INFO_Init_Recognitionservice_done" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Init_Recognitionservice_done" xml:space="preserve">
+    <value>VoiceRecognitionService initialized.</value>
   </data>
-  <data name="INFO_Ready_VOICE" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Ready_VOICE" xml:space="preserve">
+    <value>The app is now ready.</value>
   </data>
-  <data name="ERROR_occured" xml:space="preserve">
-    <value></value>
+    <data name="ERROR_occured" xml:space="preserve">
+    <value>An error has occurred:</value>
   </data>
-  <data name="ERROR_Message" xml:space="preserve">
-    <value></value>
+    <data name="ERROR_Message" xml:space="preserve">
+    <value>Message:</value>
   </data>
-  <data name="ERROR_StackTrace" xml:space="preserve">
-    <value></value>
+    <data name="ERROR_StackTrace" xml:space="preserve">
+    <value>StackTrace:</value>
   </data>
-  <data name="INFO_Waiting_for_Trigger" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Waiting_for_Trigger" xml:space="preserve">
+    <value>Waiting for trigger word 'Kira'...</value>
   </data>
-  <data name="INFO_Triggered" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Triggered" xml:space="preserve">
+    <value>Trigger word recognized. Listening for command...</value>
   </data>
-  <data name="INFO_Convert_Audio" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Convert_Audio" xml:space="preserve">
+    <value>Processing audio...</value>
   </data>
-  <data name="INFO_Recognized_Order" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Recognized_Order" xml:space="preserve">
+    <value>Understood command:</value>
   </data>
-  <data name="ANSWER" xml:space="preserve">
-    <value></value>
+    <data name="ANSWER" xml:space="preserve">
+    <value>Answer:</value>
   </data>
-  <data name="INFO_No_Voirce_Recognized" xml:space="preserve">
-    <value></value>
+    <data name="INFO_No_Voirce_Recognized" xml:space="preserve">
+    <value>No voice input recognized.</value>
   </data>
-  <data name="INFO_Didnt_Understand" xml:space="preserve">
-    <value></value>
+    <data name="INFO_Didnt_Understand" xml:space="preserve">
+    <value>Sorry, I didn't understand that.</value>
   </data>
-  <data name="MANAGE_Commands" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Commands" xml:space="preserve">
+    <value>Do you want to add new commands or answers, or delete existing commands?</value>
   </data>
-  <data name="MANAGE_Didnt_Understand" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Didnt_Understand" xml:space="preserve">
+    <value>I didn't understand you. Please say 'Add' or 'Delete'.</value>
   </data>
-  <data name="MANAGE_Ask_For_Answer" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Ask_For_Answer" xml:space="preserve">
+    <value>Please say 'Add' or 'Delete'.</value>
   </data>
-  <data name="GENERAL_Add" xml:space="preserve">
-    <value></value>
+    <data name="GENERAL_Add" xml:space="preserve">
+    <value>Add</value>
   </data>
-  <data name="GENERAL_Delete" xml:space="preserve">
-    <value></value>
+    <data name="GENERAL_Delete" xml:space="preserve">
+    <value>Delete</value>
   </data>
-  <data name="COMMAND_Help" xml:space="preserve">
-    <value></value>
+    <data name="COMMAND_Help" xml:space="preserve">
+    <value>I have internalized the following commands:</value>
   </data>
-  <data name="MANAGE_New_Command" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_New_Command" xml:space="preserve">
+    <value>Okay, let's add a new command.</value>
   </data>
-  <data name="MANAGE_Waiting_for_new_Command" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Waiting_for_new_Command" xml:space="preserve">
+    <value>Please say the name of the new command.</value>
   </data>
-  <data name="MANAGE_Comand_Exists" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Comand_Exists" xml:space="preserve">
+    <value>This command already exists. We're adding a new answer.</value>
   </data>
-  <data name="MANAGE_Adding_New_Command" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Add_Answer" xml:space="preserve">
+    <value>Please say the answer for this command.</value>
   </data>
-  <data name="MANAGE_Add_Answer" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Adding_New_Command" xml:space="preserve">
+    <value>New command is being created.</value>
   </data>
-  <data name="MANAGE_Check_Answer" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Check_Answer" xml:space="preserve">
+    <value>The new answer is: $$$. Is that correct? Say yes to confirm.</value>
   </data>
-  <data name="MANAGE_Commit_new_Answer" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Commit_new_Answer" xml:space="preserve">
+    <value>Please confirm with 'yes' or 'no'.</value>
   </data>
-  <data name="MANAGE_Succsess" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Succsess" xml:space="preserve">
+    <value>New command was successfully added.</value>
   </data>
-  <data name="MANAGE_Cancel" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Cancel" xml:space="preserve">
+    <value>Operation cancelled. The new command was not added.</value>
   </data>
-  <data name="MANAGE_Delete_Command_Input" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Delete_Command_Input" xml:space="preserve">
+    <value>Which command do you want to delete?</value>
   </data>
-  <data name="MANAGE_Delete_Command_CTA" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Delete_Command_CTA" xml:space="preserve">
+    <value>Please name the command.</value>
   </data>
-  <data name="MANAGE_Delete_Succsess" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Delete_Succsess" xml:space="preserve">
+    <value>The command '$$$' was successfully deleted.</value>
   </data>
-  <data name="MANAGE_Delete_Cancel" xml:space="preserve">
-    <value></value>
+    <data name="MANAGE_Delete_Cancel" xml:space="preserve">
+    <value>The command '$$$' does not exist.</value>
   </data>
-  <data name="ERROR_LangModel_Directory_not_found" xml:space="preserve">
-    <value></value>
+    <data name="ERROR_LangModel_Directory_not_found" xml:space="preserve">
+    <value>The language model directory was not found:</value>
   </data>
-  <data name="INFO_UI_Language" xml:space="preserve">
-    <value></value>
+    <data name="INFO_UI_Language" xml:space="preserve">
+    <value>User interface set to English.</value>
   </data>
+
+   <data name="COMMAND_hallo" xml:space="preserve">
+    <value>hello</value>
+  </data>
+    <data name="COMMAND_SYN_hallo_hi" xml:space="preserve">
+    <value>hi</value>
+  </data>
+    <data name="COMMAND_SYN_hallo_hey" xml:space="preserve">
+    <value>hey</value>
+  </data>
+    <data name="COMMAND_SYN_hallo_gruessgott" xml:space="preserve">
+    <value>greetings</value>
+  </data>
+    <data name="COMMAND_SYN_hallo_gutentag" xml:space="preserve">
+    <value>good day</value>
+  </data>
+    <data name="COMMAND_SYN_hallo_servus" xml:space="preserve">
+    <value>howdy</value>
+  </data>
+    <data name="COMMAND_SYN_hallo_moin" xml:space="preserve">
+    <value>morning</value>
+  </data>
+    <data name="COMMAND_SYN_hallo_gruezi" xml:space="preserve">
+    <value>g'day</value>
+  </data>
+    <data name="COMMAND_SYN_hallo_sali" xml:space="preserve">
+    <value>hiya</value>
+  </data>
+    <data name="COMMAND_ANSW_hallo_1" xml:space="preserve">
+    <value>Good day! What can I do for you?</value>
+  </data>
+    <data name="COMMAND_ANSW_hallo_2" xml:space="preserve">
+    <value>Hi! How can I assist you?</value>
+  </data>
+    <data name="COMMAND_ANSW_hallo_3" xml:space="preserve">
+    <value>Greetings! Nice to hear from you.</value>
+  </data>
+    <data name="COMMAND_ANSW_hallo_4" xml:space="preserve">
+    <value>Howdy! What brings you here?</value>
+  </data>
+    <data name="COMMAND_ANSW_hallo_5" xml:space="preserve">
+    <value>Morning! Nice to see you.</value>
+  </data>
+    <data name="COMMAND_ANSW_hallo_6" xml:space="preserve">
+    <value>Hello! How can I help you?</value>
+  </data>
+    <data name="COMMAND_ANSW_hallo_7" xml:space="preserve">
+    <value>Cheers, you little rascal.</value>
+  </data>
+    <data name="COMMAND_wie_geht_es_dir" xml:space="preserve">
+    <value>how are you</value>
+  </data>
+    <data name="COMMAND_SYN_wie_geht_es_dir_wiegehts" xml:space="preserve">
+    <value>how's it going</value>
+  </data>
+    <data name="COMMAND_SYN_wie_geht_es_dir_allesklar" xml:space="preserve">
+    <value>everything alright</value>
+  </data>
+    <data name="COMMAND_SYN_wie_geht_es_dir_wielaeufts" xml:space="preserve">
+    <value>how's it hanging</value>
+  </data>
+    <data name="COMMAND_SYN_wie_geht_es_dir_wiefuehlstdu" xml:space="preserve">
+    <value>how do you feel</value>
+  </data>
+    <data name="COMMAND_SYN_wie_geht_es_dir_stimmung" xml:space="preserve">
+    <value>what's your mood</value>
+  </data>
+    <data name="COMMAND_SYN_wie_geht_es_dir_gutdrauf" xml:space="preserve">
+    <value>are you in good spirits</value>
+  </data>
+    <data name="COMMAND_SYN_wie_geht_es_dir_allesgut" xml:space="preserve">
+    <value>all good with you</value>
+  </data>
+    <data name="COMMAND_ANSW_wie_geht_es_dir_1" xml:space="preserve">
+    <value>I'm doing great, thank you!</value>
+  </data>
+    <data name="COMMAND_ANSW_wie_geht_es_dir_2" xml:space="preserve">
+    <value>I'm in a great mood, and you?</value>
+  </data>
+    <data name="COMMAND_ANSW_wie_geht_es_dir_3" xml:space="preserve">
+    <value>I feel fantastic, thanks for asking.</value>
+  </data>
+    <data name="COMMAND_ANSW_wie_geht_es_dir_4" xml:space="preserve">
+    <value>Everything's great with me, how about you?</value>
+  </data>
+    <data name="COMMAND_ANSW_wie_geht_es_dir_5" xml:space="preserve">
+    <value>I'm in top form, and you?</value>
+  </data>
+    <data name="COMMAND_ANSW_wie_geht_es_dir_6" xml:space="preserve">
+    <value>I'm doing well, thanks for asking!</value>
+  </data>
+    <data name="COMMAND_ANSW_wie_geht_es_dir_7" xml:space="preserve">
+    <value>Excellent, and how about you?</value>
+  </data>
+
+    <data name="COMMAND_erzaehle_einen_witz" xml:space="preserve">
+    <value>tell a joke</value>
+  </data>
+    <data name="COMMAND_SYN_erzaehle_einen_witz_erzaehl" xml:space="preserve">
+    <value>tell me a joke</value>
+  </data>
+    <data name="COMMAND_SYN_erzaehle_einen_witz_witz" xml:space="preserve">
+    <value>joke</value>
+  </data>
+    <data name="COMMAND_SYN_erzaehle_einen_witz_witze" xml:space="preserve">
+    <value>jokes</value>
+  </data>
+    <data name="COMMAND_SYN_erzaehle_einen_witz_scherz" xml:space="preserve">
+    <value>jest</value>
+  </data>
+    <data name="COMMAND_SYN_erzaehle_einen_witz_joke" xml:space="preserve">
+    <value>joke</value>
+  </data>
+    <data name="COMMAND_SYN_erzaehle_einen_witz_etwas_lustiges" xml:space="preserve">
+    <value>something funny</value>
+  </data>
+    <data name="COMMAND_SYN_erzaehle_einen_witz_zum_lachen" xml:space="preserve">
+    <value>to laugh</value>
+  </data>
+    <data name="COMMAND_SYN_erzaehle_einen_witz_sei_lustig" xml:space="preserve">
+    <value>be funny</value>
+  </data>
+    <data name="COMMAND_SYN_erzaehle_einen_witz_mach_einen_witz" xml:space="preserve">
+    <value>make a joke</value>
+  </data>
+    <data name="COMMAND_SYN_erzaehle_einen_witz_bring_mich_zum_lachen" xml:space="preserve">
+    <value>make me laugh</value>
+  </data>
+    <data name="COMMAND_SYN_erzaehle_einen_witz_sei_witzig" xml:space="preserve">
+    <value>be humorous</value>
+  </data>
+    <data name="COMMAND_SYN_erzaehle_einen_witz_erzaehle_etwas_komisches" xml:space="preserve">
+    <value>tell me something funny</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_1" xml:space="preserve">
+    <value>What's orange and sounds like a parrot? A carrot!</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_2" xml:space="preserve">
+    <value>Why can't ghosts lie? Because you can see right through them.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_3" xml:space="preserve">
+    <value>What does a pirate say at a computer? Shiver me timbers!</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_4" xml:space="preserve">
+    <value>What's a tree's favorite drink? Root beer.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_5" xml:space="preserve">
+    <value>What's green and hops through the woods? A frog in pajamas.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_6" xml:space="preserve">
+    <value>Why do bees wear helmets? Because they might dissolve into thin air.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_7" xml:space="preserve">
+    <value>What's black and white and sits on a tree? A hungry panda.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_8" xml:space="preserve">
+    <value>What does a mathematician say to his friend? I'm so happy, I could say Pi-times-thumb!</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_9" xml:space="preserve">
+    <value>Why can't fish play basketball? Because they're afraid of the net.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_10" xml:space="preserve">
+    <value>What's the opposite of a hot dog? A cold cat.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_11" xml:space="preserve">
+    <value>What's an astronaut's favorite food? UFOs (Unidentified Fried Objects).</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_12" xml:space="preserve">
+    <value>What's the difference between a piano and a fish? You can tune a piano, but you can't tuna fish!</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_13" xml:space="preserve">
+    <value>Why don't giraffes wear socks? Because they have long necks.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_14" xml:space="preserve">
+    <value>What's a snowman's favorite food? Ice-cicles.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_15" xml:space="preserve">
+    <value>Why don't ants go to church? Because they're in-sects.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_16" xml:space="preserve">
+    <value>What's a computer's favorite snack? Microchips.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_17" xml:space="preserve">
+    <value>What's a programmer's favorite drink? Java.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_18" xml:space="preserve">
+    <value>Why are tomatoes so red? Because they're embarrassed that they can't swim.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_19" xml:space="preserve">
+    <value>What's a ghost's favorite food? Boo-sghetti.</value>
+  </data>
+    <data name="COMMAND_ANSW_erzaehle_einen_witz_20" xml:space="preserve">
+    <value>Why don't birds wear shoes? Because they already have feathers.</value>
+  </data>
+    <data name="COMMAND_auf_wiedersehen" xml:space="preserve">
+    <value>goodbye</value>
+  </data>
+    <data name="COMMAND_SYN_auf_wiedersehen_tschuess" xml:space="preserve">
+    <value>bye</value>
+  </data>
+    <data name="COMMAND_SYN_auf_wiedersehen_bis_bald" xml:space="preserve">
+    <value>see you soon</value>
+  </data>
+    <data name="COMMAND_SYN_auf_wiedersehen_ciao" xml:space="preserve">
+    <value>ciao</value>
+  </data>
+    <data name="COMMAND_SYN_auf_wiedersehen_adieu" xml:space="preserve">
+    <value>adieu</value>
+  </data>
+    <data name="COMMAND_SYN_auf_wiedersehen_machs_gut" xml:space="preserve">
+    <value>take care</value>
+  </data>
+    <data name="COMMAND_SYN_auf_wiedersehen_bis_dann" xml:space="preserve">
+    <value>see you later</value>
+  </data>
+    <data name="COMMAND_SYN_auf_wiedersehen_leb_wohl" xml:space="preserve">
+    <value>farewell</value>
+  </data>
+    <data name="COMMAND_SYN_auf_wiedersehen_auf_wiederhoeren" xml:space="preserve">
+    <value>talk to you later</value>
+  </data>
+    <data name="COMMAND_SYN_auf_wiedersehen_bis_zum_naechsten_mal" xml:space="preserve">
+    <value>until next time</value>
+  </data>
+    <data name="COMMAND_SYN_auf_wiedersehen_schoenen_tag_noch" xml:space="preserve">
+    <value>have a nice day</value>
+  </data>
+    <data name="COMMAND_ANSW_auf_wiedersehen_1" xml:space="preserve">
+    <value>Take care! See you soon.</value>
+  </data>
+    <data name="COMMAND_ANSW_auf_wiedersehen_2" xml:space="preserve">
+    <value>Take care of yourself! We'll see each other again.</value>
+  </data>
+    <data name="COMMAND_ANSW_auf_wiedersehen_3" xml:space="preserve">
+    <value>All the best! Hope to see you soon.</value>
+  </data>
+    <data name="COMMAND_ANSW_auf_wiedersehen_4" xml:space="preserve">
+    <value>Have a nice day! Until next time.</value>
+  </data>
+    <data name="COMMAND_ANSW_auf_wiedersehen_5" xml:space="preserve">
+    <value>Stay healthy! Looking forward to our next meeting.</value>
+  </data>
+    <data name="COMMAND_ANSW_auf_wiedersehen_6" xml:space="preserve">
+    <value>Goodbye! I hope we'll talk again soon.</value>
+  </data>
+    <data name="COMMAND_ANSW_auf_wiedersehen_7" xml:space="preserve">
+    <value>Bye! See you next time.</value>
+  </data>
+
+    <data name="COMMAND_befehle_verwalten" xml:space="preserve">
+    <value>manage commands</value>
+  </data>
+    <data name="COMMAND_SYN_befehle_verwalten_hinzufuegen" xml:space="preserve">
+    <value>add command</value>
+  </data>
+    <data name="COMMAND_SYN_befehle_verwalten_loeschen" xml:space="preserve">
+    <value>delete command</value>
+  </data>
+    <data name="COMMAND_SYN_befehle_verwalten_aendern" xml:space="preserve">
+    <value>change command</value>
+  </data>
+    <data name="COMMAND_SYN_befehle_verwalten_kommandos" xml:space="preserve">
+    <value>manage commands</value>
+  </data>
+    <data name="COMMAND_SYN_befehle_verwalten_kommando_hinzufuegen" xml:space="preserve">
+    <value>add command</value>
+  </data>
+    <data name="COMMAND_SYN_befehle_verwalten_kommando_loeschen" xml:space="preserve">
+    <value>delete command</value>
+  </data>
+    <data name="COMMAND_SYN_befehle_verwalten_kommando_aendern" xml:space="preserve">
+    <value>change command</value>
+  </data>
+    <data name="COMMAND_SYN_befehle_verwalten_verwaltung" xml:space="preserve">
+    <value>management</value>
+  </data>
+    <data name="COMMAND_was_kannst_du" xml:space="preserve">
+    <value>what can you do</value>
+  </data>
+    <data name="COMMAND_SYN_was_kannst_du_hilfe" xml:space="preserve">
+    <value>help</value>
+  </data>
+    <data name="COMMAND_SYN_was_kannst_du_funktionen" xml:space="preserve">
+    <value>functions</value>
+  </data>
+    <data name="COMMAND_SYN_was_kannst_du_faehigkeiten" xml:space="preserve">
+    <value>abilities</value>
+  </data>
+    <data name="COMMAND_SYN_was_kannst_du_deinefunktionen" xml:space="preserve">
+    <value>what are your functions</value>
+  </data>
+    <data name="COMMAND_SYN_was_kannst_du_zeigefaehigkeiten" xml:space="preserve">
+    <value>show me your abilities</value>
+  </data>
+    <data name="COMMAND_SYN_was_kannst_du_wasmachstdu" xml:space="preserve">
+    <value>what do you do</value>
+  </data>
+    <data name="COMMAND_SYN_was_kannst_du_wiehelfen" xml:space="preserve">
+    <value>how can you help me</value>
+  </data>
+
+
 </root>
