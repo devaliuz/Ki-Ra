@@ -8,16 +8,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="F23.StringSimilarity" Version="6.0.0" />
-		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-		<PackageReference Include="Microsoft.CognitiveServices.Speech" Version="1.40.0" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.7" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
-		<PackageReference Include="Microsoft.ML" Version="3.0.1" />
-		<PackageReference Include="Microsoft.ML.TensorFlow" Version="3.0.1" />
 		<PackageReference Include="NAudio" Version="2.2.1" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="SciSharp.TensorFlow.Redist" Version="2.16.0" />
@@ -44,11 +37,27 @@
 
 	<ItemGroup>
 		<None Remove="appsettings.json" />
+		<None Remove="src\Media\background_music.mp3" />
+		<None Remove="src\Media\pling.mp3" />
+		<None Remove="src\Media\timer_beep.mp3" />
+		<None Remove="src\Media\trigger_sound.mp3" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<EmbeddedResource Include="appsettings.json">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="src\Media\background_music.mp3">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="src\Media\pling.mp3">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="src\Media\timer_beep.mp3">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="src\Media\trigger_sound.mp3">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</EmbeddedResource>
 	</ItemGroup>
 
@@ -62,24 +71,12 @@
 
 	<ItemGroup>
 	  <EmbeddedResource Update="src\Language\texts.de.resx">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </EmbeddedResource>
 	  <EmbeddedResource Update="src\Language\texts.resx">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	    <LastGenOutput>texts.Designer.cs</LastGenOutput>
 	    <Generator>ResXFileCodeGenerator</Generator>
 	  </EmbeddedResource>
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Update="src\Media\background_music.mp3">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
-		<None Update="src\Media\pling.mp3">
-		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
-		<None Update="src\Media\trigger_sound.mp3">
-		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
 	</ItemGroup>
 </Project>

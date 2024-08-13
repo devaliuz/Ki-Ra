@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ki_Ra.src.Core.Services
+﻿namespace Ki_Ra.src.Core.Services
 {
     public static class StringSimilarity
     {

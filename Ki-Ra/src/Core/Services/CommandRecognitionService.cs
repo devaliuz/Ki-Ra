@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using F23.StringSimilarity;
-using Ki_Ra.src.Core.Services;
+﻿using Ki_Ra.src.Core.Services;
 using KiRa.Infrastructure.Services;
 
 namespace KiRa.Core.Services
