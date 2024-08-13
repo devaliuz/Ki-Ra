@@ -2,11 +2,11 @@
 
 namespace KiRa.Core.Services
 {
-    public class TextToSpeechService
+    public class TextToSpeechService_SystemSpeechSynthesis
     {
         private readonly SpeechSynthesizer _synthesizer;
 
-        public TextToSpeechService()
+        public TextToSpeechService_SystemSpeechSynthesis()
         {
             _synthesizer = new SpeechSynthesizer();
         }

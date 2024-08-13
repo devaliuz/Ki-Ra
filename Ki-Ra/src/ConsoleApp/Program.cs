@@ -81,7 +81,8 @@ class Program
         services.AddSingleton<IVoiceRecognitionService>(sp => sp.GetRequiredService<VoiceRecognitionService>());
         services.AddSingleton<AudioRecordingService>();
         services.AddSingleton<CommandProcessingService>();
-        services.AddSingleton<TextToSpeechService>();
+        //services.AddSingleton<TextToSpeechService_SystemSpeechSynthesis>();
+        services.AddSingleton<TextToSpeechService_CognitiveServices>();
         services.AddSingleton(audioPlayerService);
         services.AddSingleton<CommandRecognitionService>();
 
@@ -98,7 +99,8 @@ class Program
 
         try
         {
-            var textToSpeechService = serviceProvider.GetRequiredService<TextToSpeechService>();
+            //var textToSpeechService = serviceProvider.GetRequiredService<TextToSpeechService_SystemSpeechSynthesis>();
+            var textToSpeechService = serviceProvider.GetRequiredService<TextToSpeechService_CognitiveServices>();
 
             textToSpeechService.Speak($"{LanguageManager.GetString("INFO_Initial_Greeting_VOICE")}");
 

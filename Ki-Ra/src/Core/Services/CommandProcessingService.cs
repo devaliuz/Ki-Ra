@@ -13,7 +13,8 @@ namespace KiRa.Core.Services
     public class CommandProcessingService
     {
         private readonly DatabaseManager _databaseManager;
-        private readonly TextToSpeechService _textToSpeechService;
+        //private readonly TextToSpeechService_SystemSpeechSynthesis _textToSpeechService;
+        private readonly TextToSpeechService_CognitiveServices _textToSpeechService;
         private readonly AudioRecordingService _audioRecordingService;
         private readonly IVoiceRecognitionService _voiceRecognitionService;
         private readonly CommandRecognitionService _commandRecognitionService;
@@ -21,7 +22,8 @@ namespace KiRa.Core.Services
 
         public CommandProcessingService(
             DatabaseManager databaseManager,
-            TextToSpeechService textToSpeechService,
+            //TextToSpeechService_SystemSpeechSynthesis textToSpeechService,
+            TextToSpeechService_CognitiveServices textToSpeechService,
             AudioRecordingService audioRecordingService,
             IVoiceRecognitionService voiceRecognitionService,
             CommandRecognitionService commandRecognitionService)
