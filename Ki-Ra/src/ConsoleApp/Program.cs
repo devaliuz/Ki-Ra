@@ -81,8 +81,8 @@ class Program
         services.AddSingleton<IVoiceRecognitionService>(sp => sp.GetRequiredService<VoiceRecognitionService>());
         services.AddSingleton<AudioRecordingService>();
         services.AddSingleton<CommandProcessingService>();
-        //services.AddSingleton<TextToSpeechService_SystemSpeechSynthesis>();
-        services.AddSingleton<TextToSpeechService_CognitiveServices>();
+        services.AddSingleton<TextToSpeechService_SystemSpeechSynthesis>();
+        //services.AddSingleton<TextToSpeechService_CognitiveServices>();
         services.AddSingleton(audioPlayerService);
         services.AddSingleton<CommandRecognitionService>();
 
@@ -99,10 +99,10 @@ class Program
 
         try
         {
-            //var textToSpeechService = serviceProvider.GetRequiredService<TextToSpeechService_SystemSpeechSynthesis>();
-            var textToSpeechService = serviceProvider.GetRequiredService<TextToSpeechService_CognitiveServices>();
+            var textToSpeechService = serviceProvider.GetRequiredService<TextToSpeechService_SystemSpeechSynthesis>();
+            //var textToSpeechService = serviceProvider.GetRequiredService<TextToSpeechService_CognitiveServices>();
 
-            textToSpeechService.Speak($"{LanguageManager.GetString("INFO_Initial_Greeting_VOICE")}");
+            textToSpeechService.SpeakAsync($"{LanguageManager.GetString("INFO_Initial_Greeting_VOICE")}");
 
             // Lade das Modell einmal
             Console.WriteLine($"{LanguageManager.GetString("INFO_Loading_Model")}");
@@ -122,7 +122,7 @@ class Program
             Console.WriteLine($"{LanguageManager.GetString("INFO_Init_Recognitionservice_done")}");
 
             audioPlayerService.StopBackgroundMusic();
-            textToSpeechService.Speak($"{LanguageManager.GetString("INFO_Ready_VOICE")}");
+            textToSpeechService.SpeakAsync($"{LanguageManager.GetString("INFO_Ready_VOICE")}");
 
             await command.ExecuteAsync();
         }

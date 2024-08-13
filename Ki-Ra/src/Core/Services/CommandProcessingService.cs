@@ -13,8 +13,8 @@ namespace KiRa.Core.Services
     public class CommandProcessingService
     {
         private readonly DatabaseManager _databaseManager;
-        //private readonly TextToSpeechService_SystemSpeechSynthesis _textToSpeechService;
-        private readonly TextToSpeechService_CognitiveServices _textToSpeechService;
+        private readonly TextToSpeechService_SystemSpeechSynthesis _textToSpeechService;
+        //private readonly TextToSpeechService_CognitiveServices _textToSpeechService;
         private readonly AudioRecordingService _audioRecordingService;
         private readonly IVoiceRecognitionService _voiceRecognitionService;
         private readonly CommandRecognitionService _commandRecognitionService;
@@ -22,8 +22,8 @@ namespace KiRa.Core.Services
 
         public CommandProcessingService(
             DatabaseManager databaseManager,
-            //TextToSpeechService_SystemSpeechSynthesis textToSpeechService,
-            TextToSpeechService_CognitiveServices textToSpeechService,
+            TextToSpeechService_SystemSpeechSynthesis textToSpeechService,
+            //TextToSpeechService_CognitiveServices textToSpeechService,
             AudioRecordingService audioRecordingService,
             IVoiceRecognitionService voiceRecognitionService,
             CommandRecognitionService commandRecognitionService)
@@ -67,7 +67,7 @@ namespace KiRa.Core.Services
         private async Task<string> HandleCommandManagementAsync()
         {
             string response = LanguageManager.GetString("MANAGE_Commands");
-            _textToSpeechService.Speak(response);
+            _textToSpeechService.SpeakAsync(response);
             Console.WriteLine(response);
 
             string action = await GetAudioInputAsync(LanguageManager.GetString("MANAGE_Ask_For_Answer"));
@@ -83,7 +83,7 @@ namespace KiRa.Core.Services
             else
             {
                 response = LanguageManager.GetString("MANAGE_Didnt_Understand");
-                _textToSpeechService.Speak(response);
+                _textToSpeechService.SpeakAsync(response);
                 return response;
             }
         }
@@ -108,7 +108,7 @@ namespace KiRa.Core.Services
         private async Task<string> AddNewCommandAsync()
         {
             string response = $"{LanguageManager.GetString("MANAGE_New_Command")}";
-            _textToSpeechService.Speak(response);
+            _textToSpeechService.SpeakAsync(response);
             Console.WriteLine(response);
 
             string newCommand = await GetAudioInputAsync($"{LanguageManager.GetString("MANAGE_Waiting_for_new_Command")}");
@@ -117,13 +117,13 @@ namespace KiRa.Core.Services
             if (commandExists)
             {
                 response = $"{LanguageManager.GetString("MANAGE_Comand_Exists")}";
-                _textToSpeechService.Speak(response);
+                _textToSpeechService.SpeakAsync(response);
                 Console.WriteLine(response);
             }
             else
             {
                 response = $"{LanguageManager.GetString("MANAGE_Adding_New_Command")}";
-                _textToSpeechService.Speak(response);
+                _textToSpeechService.SpeakAsync(response);
                 Console.WriteLine(response);
             }
 
@@ -131,7 +131,7 @@ namespace KiRa.Core.Services
 
             response = $"{LanguageManager.GetString("MANAGE_Check_Answer")}".Replace("$$$",newAnswer);
 
-            _textToSpeechService.Speak(response);
+            _textToSpeechService.SpeakAsync(response);
             Console.WriteLine(response);
 
             string confirmation = await GetAudioInputAsync($"{LanguageManager.GetString("MANAGE_Commit_new_Answer")}");
@@ -150,7 +150,7 @@ namespace KiRa.Core.Services
         private async Task<string> DeleteCommandAsync()
         {
             string response = $"{LanguageManager.GetString("MANAGE_Delete_Command_Input")}";
-            _textToSpeechService.Speak(response);
+            _textToSpeechService.SpeakAsync(response);
             Console.WriteLine(response);
 
             string commandToDelete = await GetAudioInputAsync($"{LanguageManager.GetString("MANAGE_Delete_Command_CTA")}");
@@ -170,7 +170,7 @@ namespace KiRa.Core.Services
 
         private async Task<string> GetAudioInputAsync(string prompt)
         {
-            _textToSpeechService.Speak(prompt);
+            _textToSpeechService.SpeakAsync(prompt);
             Console.WriteLine(prompt);
 
             AudioPlayerService audioPlayerService = new AudioPlayerService();

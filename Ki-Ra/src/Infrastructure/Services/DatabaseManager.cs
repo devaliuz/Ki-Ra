@@ -35,6 +35,7 @@ namespace KiRa.Infrastructure.Services
                 LanguageManager.GetString("COMMAND_hallo"),
                 new List<string>
                 {
+                LanguageManager.GetString("COMMAND_hallo"),
                 LanguageManager.GetString("COMMAND_SYN_hallo_hi"),
                 LanguageManager.GetString("COMMAND_SYN_hallo_hey"),
                 LanguageManager.GetString("COMMAND_SYN_hallo_gruessgott"),
@@ -60,6 +61,7 @@ namespace KiRa.Infrastructure.Services
                 LanguageManager.GetString("COMMAND_wie_geht_es_dir"),
                 new List<string>
                 {
+                LanguageManager.GetString("COMMAND_wie_geht_es_dir"),
                 LanguageManager.GetString("COMMAND_SYN_wie_geht_es_dir_wiegehts"),
                 LanguageManager.GetString("COMMAND_SYN_wie_geht_es_dir_allesklar"),
                 LanguageManager.GetString("COMMAND_SYN_wie_geht_es_dir_wielaeufts"),
@@ -84,6 +86,7 @@ namespace KiRa.Infrastructure.Services
                 LanguageManager.GetString("COMMAND_erzaehle_einen_witz"),
                 new List<string>
                 {
+                LanguageManager.GetString("COMMAND_erzaehle_einen_witz"),
                 LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_erzaehl"),
                 LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_witz"),
                 LanguageManager.GetString("COMMAND_SYN_erzaehle_einen_witz_witze"),
@@ -126,6 +129,7 @@ namespace KiRa.Infrastructure.Services
                 LanguageManager.GetString("COMMAND_auf_wiedersehen"),
                 new List<string>
                 {
+                LanguageManager.GetString("COMMAND_auf_wiedersehen"),
                 LanguageManager.GetString("COMMAND_SYN_auf_wiedersehen_tschuess"),
                 LanguageManager.GetString("COMMAND_SYN_auf_wiedersehen_bis_bald"),
                 LanguageManager.GetString("COMMAND_SYN_auf_wiedersehen_ciao"),
@@ -156,6 +160,7 @@ namespace KiRa.Infrastructure.Services
                 LanguageManager.GetString("COMMAND_befehle_verwalten"),
                 new List<string>
                 {
+                    LanguageManager.GetString("COMMAND_befehle_verwalten"),
                     LanguageManager.GetString("COMMAND_SYN_befehle_verwalten_hinzufuegen"),
                     LanguageManager.GetString("COMMAND_SYN_befehle_verwalten_loeschen"),
                     LanguageManager.GetString("COMMAND_SYN_befehle_verwalten_aendern"),
@@ -170,7 +175,8 @@ namespace KiRa.Infrastructure.Services
             AddCommandWithSynonyms(
                 LanguageManager.GetString("COMMAND_was_kannst_du"),
                 new List<string>
-                {
+                {                
+                    LanguageManager.GetString("COMMAND_was_kannst_du"),
                     LanguageManager.GetString("COMMAND_SYN_was_kannst_du_hilfe"),
                     LanguageManager.GetString("COMMAND_SYN_was_kannst_du_funktionen"),
                     LanguageManager.GetString("COMMAND_SYN_was_kannst_du_faehigkeiten"),
@@ -431,51 +437,51 @@ namespace KiRa.Infrastructure.Services
             }
         }
 
-        public string GetRandomAnswer(string command)
-        {
-            using (var context = new CommandDbContext(_connectionString))
-            {
-                var answers = context.Commands
-                    .Where(c => c.Command.ToLower() == command.ToLower())
-                    .SelectMany(c => c.Answers.Select(a => a.Answer))
-                    .ToList();
+        //public string GetRandomAnswer(string command)
+        //{
+        //    using (var context = new CommandDbContext(_connectionString))
+        //    {
+        //        var answers = context.Commands
+        //            .Where(c => c.Command.ToLower() == command.ToLower())
+        //            .SelectMany(c => c.Answers.Select(a => a.Answer))
+        //            .ToList();
 
-                if (answers.Any())
-                {
-                    Random rnd = new Random();
-                    int index = rnd.Next(answers.Count);
-                    return answers[index];
-                }
+        //        if (answers.Any())
+        //        {
+        //            Random rnd = new Random();
+        //            int index = rnd.Next(answers.Count);
+        //            return answers[index];
+        //        }
 
-                return null;
-            }
-        }
+        //        return null;
+        //    }
+        //}
 
-        public bool HasMinimumSynonyms(string command, int minSynonyms = 5)
-        {
-            using (var context = new CommandDbContext(_connectionString))
-            {
-                var synonymCount = context.Commands
-                    .Where(c => c.Command.ToLower() == command.ToLower())
-                    .SelectMany(c => c.Synonyms)
-                    .Count();
+        //public bool HasMinimumSynonyms(string command, int minSynonyms = 5)
+        //{
+        //    using (var context = new CommandDbContext(_connectionString))
+        //    {
+        //        var synonymCount = context.Commands
+        //            .Where(c => c.Command.ToLower() == command.ToLower())
+        //            .SelectMany(c => c.Synonyms)
+        //            .Count();
 
-                return synonymCount >= minSynonyms;
-            }
-        }
+        //        return synonymCount >= minSynonyms;
+        //    }
+        //}
 
-        public void EnsureMinimumSynonyms(string command, int minSynonyms = 5)
-        {
-            if (!HasMinimumSynonyms(command, minSynonyms))
-            {
-                var currentSynonyms = GetSynonyms(command);
-                var missingCount = minSynonyms - currentSynonyms.Count;
+        //public void EnsureMinimumSynonyms(string command, int minSynonyms = 5)
+        //{
+        //    if (!HasMinimumSynonyms(command, minSynonyms))
+        //    {
+        //        var currentSynonyms = GetSynonyms(command);
+        //        var missingCount = minSynonyms - currentSynonyms.Count;
 
-                for (int i = 0; i < missingCount; i++)
-                {
-                    AddSynonym(command, $"{command}_synonym_{i + 1}");
-                }
-            }
-        }
+        //        for (int i = 0; i < missingCount; i++)
+        //        {
+        //            AddSynonym(command, $"{command}_synonym_{i + 1}");
+        //        }
+        //    }
+        //}
     }
 }

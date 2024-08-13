@@ -116,8 +116,8 @@ namespace KiRa.ConsoleApp.Commands
         private readonly IVoiceRecognitionService _voiceRecognitionService;
         private readonly AudioRecordingService _audioRecordingService;
         private readonly CommandProcessingService _commandProcessingService;
-        //private readonly TextToSpeechService_SystemSpeechSynthesis _textToSpeechService;
-        private readonly TextToSpeechService_CognitiveServices _textToSpeechService;
+        private readonly TextToSpeechService_SystemSpeechSynthesis _textToSpeechService;
+        //private readonly TextToSpeechService_CognitiveServices _textToSpeechService;
         private readonly VoskRecognizer _recognizer;
         private readonly AudioPlayerService _audioPlayerService;
 
@@ -125,8 +125,8 @@ namespace KiRa.ConsoleApp.Commands
             IVoiceRecognitionService voiceRecognitionService,
             AudioRecordingService audioRecordingService,
             CommandProcessingService commandProcessingService,
-            //TextToSpeechService_SystemSpeechSynthesis textToSpeechService,
-            TextToSpeechService_CognitiveServices textToSpeechService,
+            TextToSpeechService_SystemSpeechSynthesis textToSpeechService,
+            //TextToSpeechService_CognitiveServices textToSpeechService,
             Model model,
             AudioPlayerService audioPlayerService)
         {
@@ -155,7 +155,7 @@ namespace KiRa.ConsoleApp.Commands
 
                     string response = await _commandProcessingService.ProcessCommandAsync(command);
                     Console.WriteLine($"{LanguageManager.GetString("ANSWER")} {response}");
-                    _textToSpeechService.Speak(response);
+                    _textToSpeechService.SpeakAsync(response);
                 }
             }
         }
