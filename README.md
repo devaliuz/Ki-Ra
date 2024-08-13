@@ -11,6 +11,8 @@ Ki-Ra is a voice-controlled assistant built on .NET 8 and C#. It utilizes the Vo
 * **Database Management:** Stores and manages commands, their corresponding responses, and synonyms for commands in a SQLite database.
 * **Extensibility:** New commands and responses can be easily added via voice commands or directly in the database.
 * **Trigger word activation**: Ki-Ra will only listen for commands after the trigger word "Kira" is spoken.
+* **English support**: UI and "Default-Commands" support english.
+
 
 ## Prerequisites
 
@@ -33,9 +35,9 @@ Ki-Ra is a voice-controlled assistant built on .NET 8 and C#. It utilizes the Vo
 
    [https://alphacephei.com/vosk/models](https://alphacephei.com/vosk/models)
 
-4.Place the downloaded model files into the src/Infrastructure/models/lang_Model directory.
+4. Place the downloaded model files into the src/Infrastructure/models/lang_Model directory.
 
-5.Update the appsettings.json file with the correct ModelPath pointing to the directory where you placed the model files
+5. Update the appsettings.json file with the correct ModelPath pointing to the directory where you placed the model files
 
 6. Build the project:
 
@@ -57,13 +59,12 @@ Ki-Ra is a voice-controlled assistant built on .NET 8 and C#. It utilizes the Vo
 
 ## Default Commands
 
-* "Hallo": Ki-Ra greets you with various responses.
-* "Wie geht es dir?": Ki-Ra provides information about its well-being.
-* "Witz": Ki-Ra tells a joke.
-* "Auf Wiedersehen": Ki-Ra says goodbye.
-* "Neuer Befehl": Allows adding new commands and responses via voice commands.
-* "Was kannst du": Lists all available commands.
-* "Befehle verwalten": Allows you to add, delete or modify commands and their responses
+* **"Hello":** Ki-Ra greets you with various responses.
+* **"Wow are you?":** Ki-Ra provides information about its well-being.
+* **"Tell a Joke":** Ki-Ra tells a joke.
+* **"Good Bye":** Ki-Ra says goodbye.
+* **"Help":** Lists all available commands.
+* **"Manage Commands":** Allows you to add, delete or modify commands and their responses
 
 ## Notes
 
